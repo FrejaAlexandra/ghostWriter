@@ -1,20 +1,33 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   books = Book.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
+require "open-uri"
+require "faker"
 
-puts "Cleaning database..."
+puts "Creating users..."
+
+
+cat = ["fsaf", "ddfdsfd"]
+
+# User.create!(
+#   first_name: Faker::Name.neutral_first_name,
+#   last_name: Faker::Name.last_name,
+#   email: Faker::Internet.email(name: 'sam smith', separators: ['-'], domain: 'gmail'),
+#   password: Faker::Internet.password
+# )
+
+puts "Destroying books..."
 Book.destroy_all
+puts "Creating books..."
 
-puts "Creating restaurants..."
-dishoom = {name: "Dishoom", address: "7 Boundary St, London E2 7JE", rating: 5}
-pizza_east =  {name: "Pizza East", address: "56A Shoreditch High St, London E1 6PQ", rating: 4}
+book_cover = ["https://mpd-biblio-covers.imgix.net/9781250847959.jpg?"]
 
-[dishoom, pizza_east].each do |attributes|
-  restaurant = Restaurant.create!(attributes)
-  puts "Created #{restaurant.name}"
+25.times do
+
+  @book = Book.create!(
+    user_id: User.last.id,
+    title: Faker::Book.title,
+    category: cat.sample,
+    description: Faker::JapaneseMedia::StudioGhibli.quote,
+    value: 45,
+    shares: 50,
+    example: Faker::Quotes::Rajnikanth
+  )
 end
-puts "Finished!"
