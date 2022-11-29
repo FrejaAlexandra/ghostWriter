@@ -8,10 +8,13 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@100;300;400&display=swap" rel="stylesheet">
+    <%# font-family: 'Alegreya Sans', sans-serif; %>
   </head>
 
   <body><%= render "shared/navbar" %>
-<%= render "shared/flashes" %>
+  <%= render "shared/flashes" %>
 
     <%= yield %>
   </body>
