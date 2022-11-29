@@ -1,0 +1,10 @@
+<%= simple_form_for(book) do |f| %>
+  <%= f.input :title %>
+  <%= f.input :category %>
+  <%= f.input :description %>
+  <%= f.input :value %>
+  <%= f.input :shares %>
+  <%= f.input :example %>'
+  <%= f.input :photo, as: :file %>
+  <%= f.submit %>
+<% end %>

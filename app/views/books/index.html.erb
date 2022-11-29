@@ -1,0 +1,12 @@
+<div class="container">
+  <h1>Invest in books</h1>
+
+  <%= link_to "Place your own book", new_book_path %>
+
+
+  <% @books.each do |book| %>
+    <p><%= book.title %></p>
+    <p><%= book.category %></p>
+    <p><%= book.value %></p>
+  <% end %>
+</div>
