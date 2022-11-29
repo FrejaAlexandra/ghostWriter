@@ -9,12 +9,8 @@
   <%= link_to "Place your own book", new_book_path %>
 
   <div class="grid-container">
-    <div class="card">
-      <% @books.each do |book| %>
-        <p>Title <%= book.title %></p>
-        <p>Category <%=book.category %></p>
-        <p>€ <%= book.value %></p>
-      <% end %>
-    </div>
+    <% @books.each do |book| %>
+      <%= render "shared/card", width: "", book: book %>
+    <% end %>
   </div>
 </div>
