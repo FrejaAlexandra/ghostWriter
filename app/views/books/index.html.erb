@@ -1,12 +1,16 @@
 <div class="container">
   <h1>Invest in books</h1>
 
+  <div class="dashboard">
+  <h2>Dashboard</h2>
+
+  </div>
+
   <%= link_to "Place your own book", new_book_path %>
 
-
-  <% @books.each do |book| %>
-    <p>Title <%= book.title %></p>
-    <p>Category <%=book.category %></p>
-    <p>€ <%= book.value %></p>
-  <% end %>
+  <div class="grid-container">
+    <% @books.each do |book| %>
+      <%= render "shared/card", width: "", book: book %>
+    <% end %>
+  </div>
 </div>

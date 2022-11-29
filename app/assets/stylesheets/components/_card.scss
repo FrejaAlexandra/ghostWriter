@@ -1,15 +1,35 @@
 .card {
   position: relative;
-  width: 550px;
   height: 300px;
+  border-radius: 10px;
+
   .growth {
     position: absolute;
     top: 10px;
     right: 10px;
-    font-size: 25px;
+    font-size: 24px;
     font-weight: 100;
     color: $green;
     font-family: Roboto, sans-serif;
+
+    p{
+      margin-bottom: 0;
+    }
+  }
+
+  .book-info{
+    margin: 15px 20px 0 20px;
+
+  }
+
+  .info-bar{
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+
+    p{
+      margin-right: 15px;
+    }
   }
 }
 

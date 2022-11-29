@@ -1,10 +1,9 @@
 <%= simple_form_for(book) do |f| %>
-  <%= f.input :title %>
-  <%= f.input :category %>
-  <%= f.input :description %>
-  <%= f.input :value %>
-  <%= f.input :shares %>
-  <%= f.input :example %>'
-  <%= f.input :photo, as: :file %>
-  <%= f.submit %>
+  <%= f.input :title, label: "Book title", placeholder: "Book title" %>
+  <%= f.input :category, label: "Choose a category", placeholder: "Category..." %>
+  <%= f.input :description, placeholder: "Descrtiption..." %>
+  <%= f.input :value, label: "Value of the book" , placeholder: "€" %>
+  <%= f.input :shares, label: "Total amount of shares" , placeholder: "Shares..." %>
+  <%= f.input :photo, label: "Photos" , as: :file %>
+  <%= f.submit value: "Publish" %>
 <% end %>
