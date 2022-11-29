@@ -1,26 +1,31 @@
-<div class="card d-flex flex-row p-4">
-  <div class="growth">
-    + 3.6%
-  </div>
-  <div class=" d-flex flex-column align-items-center">
-    <div class="image-upoad">
-      <img src="https://mpd-biblio-covers.imgix.net/9781250847959.jpg?" alt="book-cover" height="200px">
+<%= link_to "#", style: "text-decoration: none;" do %>
+  <div class="card d-flex flex-row p-4">
+    <div class="growth">
+      + 3.6%
     </div>
-       <div class="btn btn-white mt-3 justify-content-center">
+    <div class=" d-flex flex-column align-items-center">
+      <div class="image-upoad">
+        <img src="https://mpd-biblio-covers.imgix.net/9781250847959.jpg?" alt="book-cover" height="200px">
+      </div>
+        <div class="btn btn-white mt-3 justify-content-center">
+          $6,00
+        </div>
+    </div>
+
+    <div class="flex-column">
+      <div class="book-info p-3">
+        <h1>Title</h1>
+        <h4>Author</h4>
+        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."</p>
+        <div class="d-flex flex-row pt-3 justify-content-around">
+          <p>Queer Author</p>
+          <P>Cerebral</P>
+          <p>Classic</p>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
+       <div class="btn btn-grey mt-3 justify-content-center">
         $6,00
       </div>
-  </div>
-
-  <div class="flex-column">
-    <div class="book-info p-3">
-      <h1>Title</h1>
-      <h4>Author</h4>
-      <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."</p>
-      <div class="d-flex flex-row pt-3 justify-content-around">
-        <p>Queer Author</p>
-        <P>Cerebral</P>
-        <p>Classic</p>
-      </div>
-    </div>
-  </div>
-</div>
