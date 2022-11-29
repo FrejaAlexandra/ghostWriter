@@ -5,8 +5,8 @@
 
 
   <% @books.each do |book| %>
-    <p><%= book.title %></p>
-    <p><%= book.category %></p>
-    <p><%= book.value %></p>
+    <p>Title <%= book.title %></p>
+    <p>Category <%=book.category %></p>
+    <p>€ <%= book.value %></p>
   <% end %>
 </div>
