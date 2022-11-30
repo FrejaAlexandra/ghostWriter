@@ -2,9 +2,7 @@ require "open-uri"
 require "faker"
 
 puts "Creating users..."
-
-
-cat = ["fsaf", "ddfdsfd"]
+cat = ["s;ldfkjsfk", "ddfdsfd"]
 
 # User.create!(
 #   first_name: Faker::Name.neutral_first_name,
@@ -20,7 +18,6 @@ puts "Creating books..."
 book_cover = ["https://mpd-biblio-covers.imgix.net/9781250847959.jpg?"]
 
 25.times do
-
   @book = Book.create!(
     user_id: User.last.id,
     title: Faker::Book.title,

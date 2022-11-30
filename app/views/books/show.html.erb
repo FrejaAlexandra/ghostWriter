@@ -1,6 +1,21 @@
 <div class="container">
   <h1><%= @book.title %></h1>
 
+  <section class="d-flex">
+
+  <%= cl_image_tag @article.photo.key, height: 300, width: 400, crop: :fill %>
+
+  <div class="details">
+    <h2><%= book.title %></h2>
+    <small><%= book.category %></small>
+    <p><%= book.price %></p>
+    <button class="button-grey">Sell<%=  %></button>
+    <button class="button-White">Buy<%=  %></button>
+  </div>
+
+
+  </section>
+
   <%= link_to "Change your book", edit_book_path(@book) %>
   <%= link_to "Back to books", books_path %>
 </div>
