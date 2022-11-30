@@ -1,17 +1,9 @@
 require "open-uri"
 require "faker"
 
+puts "Destroying users."
+User.destroy_all
 puts "Creating users..."
-<<<<<<< HEAD
-cat = ["s;ldfkjsfk", "ddfdsfd"]
-
-# User.create!(
-#   first_name: Faker::Name.neutral_first_name,
-#   last_name: Faker::Name.last_name,
-#   email: Faker::Internet.email(name: 'sam smith', separators: ['-'], domain: 'gmail'),
-#   password: Faker::Internet.password
-# )
-=======
 
 User.create!(
   first_name: "Remco",
@@ -21,8 +13,6 @@ User.create!(
 )
 
 cat = ["horror", "romance", "erotica"]
->>>>>>> master
-
 puts "Destroying books..."
 Book.destroy_all
 puts "Creating books..."

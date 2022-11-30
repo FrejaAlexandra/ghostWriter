@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_11_30_110857) do
+ActiveRecord::Schema[7.0].define(version: 2022_11_30_151858) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -27,13 +27,15 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_30_110857) do
     t.index ["user_id"], name: "index_books_on_user_id"
   end
 
-  create_table "investors", force: :cascade do |t|
-    t.bigint "book_id", null: false
-    t.bigint "user_id", null: false
+  create_table "shares", force: :cascade do |t|
+    t.float "share_value"
+    t.integer "share_amount"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["book_id"], name: "index_investors_on_book_id"
-    t.index ["user_id"], name: "index_investors_on_user_id"
+    t.bigint "book_id"
+    t.bigint "user_id"
+    t.index ["book_id"], name: "index_shares_on_book_id"
+    t.index ["user_id"], name: "index_shares_on_user_id"
   end
 
   create_table "taggings", force: :cascade do |t|
@@ -84,7 +86,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_30_110857) do
   end
 
   add_foreign_key "books", "users"
-  add_foreign_key "investors", "books"
-  add_foreign_key "investors", "users"
+  add_foreign_key "shares", "books"
+  add_foreign_key "shares", "users"
   add_foreign_key "taggings", "tags"
 end
