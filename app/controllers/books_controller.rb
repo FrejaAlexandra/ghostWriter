@@ -5,8 +5,11 @@ class BooksController < ApplicationController
   end
 
   def show
+
     @book = Book.find(params[:id])
     @section = params[:section] || 'description'
+    @related_books = @book.find_related_tags
+
   end
 
   def new
@@ -37,9 +40,17 @@ class BooksController < ApplicationController
     end
   end
 
+  def tagged
+    if params[:tag].present?
+      @books = Book.tagged_with(params[:tag])
+    else
+      @books = Book.all
+    end
+  end
+
   private
 
   def book_params
-    params.require(:book).permit(:title, :category, :description, :value, :shares, :photo, :example)
+    params.require(:book).permit(:title, :category, :description, :value, :shares, :photo, :example, tag_list: [])
   end
 end
