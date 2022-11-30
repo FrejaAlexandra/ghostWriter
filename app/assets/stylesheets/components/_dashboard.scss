@@ -1,11 +1,30 @@
 .dashboard {
-  height: 200px;
-  border-radius: 15px;
+  margin: 0 auto;
+  display: flex;
+  width: 35vw;
+  height: 20vh;
+  border-radius: 5px;
+  padding: 10px;
+  flex-direction: column;
+  border: solid;
+  color: $greyscale-5;
+  background-color: $white;
+  box-shadow: 10px 10px $greyscale-2;
+  // box-shadow: ;
 }
 
-.dashboard-avatar {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
+.portfolio-value {
+  display: flex;
+  flex-direction: row;
 }
+
+.grid-dashboard {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.grid-dashboard-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;}
