@@ -30,4 +30,5 @@ book_cover = ["https://mpd-biblio-covers.imgix.net/9781250847959.jpg?"]
     shares: 50,
     example: Faker::Quotes::Rajnikanth
   )
+  puts @book.title
 end

@@ -12,7 +12,6 @@
 }
 
 .button-grey {
-
   width: 90px;
   background-color: $greyscale-3;
   border: $greyscale-1;
@@ -20,5 +19,7 @@
   color: $white;
   font-weight: 500;
   border-radius: 15px;
-  transition: 0.3s ease;
+  text-align: center;
+  justify-content: center;
+  padding: 5px 10px;
 }
