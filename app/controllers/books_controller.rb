@@ -5,7 +5,8 @@ class BooksController < ApplicationController
   end
 
   def show
-    @book = Book.find(params[:id])
+    @books = Book.find(params[:id])
+    @related_books = @book.find_related_tags
   end
 
   def new
@@ -42,11 +43,6 @@ class BooksController < ApplicationController
     else
       @books = Book.all
     end
-  end
-
-  def show
-    @books = Book.find(params[:id])
-    @related_books = @book.find_related_tags
   end
 
   private
