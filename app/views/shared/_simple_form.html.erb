@@ -1,7 +1,8 @@
 <%= simple_form_for(book) do |f| %>
   <%= f.input :title, label: "Book title", placeholder: "Book title" %>
   <%= f.input :category, label: "Choose a category", placeholder: "Category..." %>
-  <%= f.input :description, placeholder: "Descrtiption..." %>
+  <%= f.input :tag_list, as: :check_boxes, collection: [ "Fanstasy", "Romance", "Mystery", "Horror", "Thriller", "Paranormal", "Historical Fiction", "Sci-Fi", "Dystopian", "Memoir", "Art", "Self Help", "Motivational", "Health", "History", "Travel Guide", "Cookbook", "Poetry", "Erotic", "Female Author", "Trans Author", "Queer Author", "Non-Binary Author", "POC Author", "Black Author", "Asian Author", "LatinX Author", "Indegenous Author" "Agender Author", "Polysexual Author", "Disabled Author", "Neurodivergent Author", "Literary Prize", "Critcally Acclaimed", "Dark", "Cerebral", "Inspiring", "Slow-Burn", "Psychological", "Quirky", "Coming Of Age", "Cultural" ] %>
+  <%= f.input :description, placeholder: "Description..." %>
   <%= f.input :value, label: "Value of the book" , placeholder: "€" %>
   <%= f.input :shares, label: "Total amount of shares" , placeholder: "Shares..." %>
   <%= f.input :photo, label: "Photos" , as: :file %>
