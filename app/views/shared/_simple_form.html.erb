@@ -1,10 +1,21 @@
 <%= simple_form_for(book) do |f| %>
-  <%= f.input :title, label: "Book title", placeholder: "Book title" %>
-  <%= f.input :category, label: "Choose a category", placeholder: "Category..." %>
-  <%= f.input :tag_list, as: :check_boxes, collection: [ "Fanstasy", "Romance", "Mystery", "Horror", "Thriller", "Paranormal", "Historical Fiction", "Sci-Fi", "Dystopian", "Memoir", "Art", "Self Help", "Motivational", "Health", "History", "Travel Guide", "Cookbook", "Poetry", "Erotic", "Female Author", "Trans Author", "Queer Author", "Non-Binary Author", "POC Author", "Black Author", "Asian Author", "LatinX Author", "Indegenous Author" "Agender Author", "Polysexual Author", "Disabled Author", "Neurodivergent Author", "Literary Prize", "Critcally Acclaimed", "Dark", "Cerebral", "Inspiring", "Slow-Burn", "Psychological", "Quirky", "Coming Of Age", "Cultural" ] %>
-  <%= f.input :description, placeholder: "Description..." %>
-  <%= f.input :value, label: "Value of the book" , placeholder: "€" %>
-  <%= f.input :shares, label: "Total amount of shares" , placeholder: "Shares..." %>
-  <%= f.input :photo, label: "Photos" , as: :file %>
+  <%= f.input :title, label: "What's the title of your book?", placeholder: "Your book title" %>
+  <%= f.input :psuedoname, label: "Under what name would you like to publish?", placeholder: "Your Name" %>
+  <%= "Please select three categories that best represent you or your book..."  %>
+  <%= f.input :tag_list, legend_tag: false, html: {class: "d-flex"}, as: :check_boxes, collection: [ "Fanstasy", "Romance", "Mystery", "Horror", "Thriller", "Paranormal", "Historical Fiction", "Sci-Fi", "Dystopian", "Memoir", "Art", "Self Help", "Motivational", "Health", "History", "Travel Guide", "Cookbook", "Poetry", "Erotic", "Female Author", "Trans Author", "Queer Author", "Non-Binary Author", "POC Author", "Black Author", "Asian Author", "LatinX Author", "Indegenous Author" "Agender Author", "Polysexual Author", "Disabled Author", "Neurodivergent Author", "Literary Prize", "Critically Acclaimed", "Dark", "Cerebral", "Inspiring", "Slow-Burn", "Psychological", "Quirky", "Coming Of Age", "Cultural" ] %>
+  <%= f.input :description, label: "Please take some time to describe your book", placeholder: "Max 500 characters" %>
+  <%= f.input :author_description, label: "Can you tell us a little bit about yourself?", placeholder: "Max 500 characters" %>
+  <%= f.input :example, label: "Here you can paste in an extract of your book for potential investors to read...", placeholder: "Max 1000 characters" %>
+  <%= f.input :photo, label: "Please upload your cover art...", as: :file %>
+
+  <%= link_to root_path, class: "custom-label cursor-pointer" do %>
+  <%= "What are the costs of publishing your book? <strong>click here for information on the costs of self publication</strong>".html_safe %>
+  <% end %>
+  <%= f.input :value, :input_html => { value: 6000, step: 100 }, placeholder: "€", label: false %>
+
+  <%= link_to root_path, class: "custom-label cursor-pointer" do %>
+    <%= "How many shares do you want to sell? <strong>click here for information share values</strong>".html_safe %>
+  <% end %>
+  <%= f.input :shares, :input_html => { value:  1000, step: 100 }, label: "How many shares", label: false %>
   <%= f.submit value: "Publish" %>
 <% end %>

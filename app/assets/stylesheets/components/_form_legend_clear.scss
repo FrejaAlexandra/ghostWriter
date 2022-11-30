@@ -8,3 +8,16 @@
 legend ~ div.form-check:first-of-type {
   clear: left;
 }
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.custom-label, .custom-label:hover {
+  color: $greyscale-4;
+
+}
+
+a, a:hover {
+  text-decoration: none;
+}
