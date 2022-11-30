@@ -2,8 +2,5 @@ Rails.application.routes.draw do
   devise_for :users
   root to: "pages#home"
   resources :books
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
+  get '/tagged', to: "books#tagged", as: :tagged
 end

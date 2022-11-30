@@ -2,6 +2,7 @@ require "open-uri"
 require "faker"
 
 puts "Creating users..."
+<<<<<<< HEAD
 cat = ["s;ldfkjsfk", "ddfdsfd"]
 
 # User.create!(
@@ -10,12 +11,23 @@ cat = ["s;ldfkjsfk", "ddfdsfd"]
 #   email: Faker::Internet.email(name: 'sam smith', separators: ['-'], domain: 'gmail'),
 #   password: Faker::Internet.password
 # )
+=======
+
+User.create!(
+  first_name: "Remco",
+  last_name: "Jonk",
+  email: "remcojonk@hotmail.com",
+  password: "123456"
+)
+
+cat = ["horror", "romance", "erotica"]
+>>>>>>> master
 
 puts "Destroying books..."
 Book.destroy_all
 puts "Creating books..."
 
-book_cover = ["https://mpd-biblio-covers.imgix.net/9781250847959.jpg?"]
+# book_cover = ["https://mpd-biblio-covers.imgix.net/9781250847959.jpg?"]
 
 25.times do
   @book = Book.create!(
