@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container mt-5">
   <h1><%= @book.title %></h1>
 
   <section class="d-flex justify-content-between">
@@ -8,13 +8,15 @@
     </div>
 
     <div class="description">
-      <h2><%= @book.title %></h2>
+      <div>
+        <h2><%= @book.title %></h2>
 
-      <ul class="list-group list-group-flush mt-3">
-        <li class="list-group-item">Author: Remco Jonk</li>
-        <li class="list-group-item">Price: € <%= @book.value %></li>
-        <li class="list-group-item">Category: <%= @book.category %></li>
-      </ul>
+        <ul class="list-group list-group-flush mt-3">
+          <li class="list-group-item">Author: Remco Jonk</li>
+          <li class="list-group-item">Price: € <%= @book.value %></li>
+          <li class="list-group-item">Category: <%= @book.category %></li>
+        </ul>
+      </div>
 
       <div class="d-flex justify-content-between">
         <button class="button-grey">Sell<%=  %></button>
@@ -25,10 +27,10 @@
 
   <div class="info-section">
     <div class="navigation-bar">
-      <p><%= link_to "Description", book_path(@book, section: "description" ) %></p>
-      <p><%= link_to "Author", book_path(@book, section: "author") %></p>
-      <p><%= link_to "Financials", book_path(@book, section: "financial") %></p>
-      <p><%= link_to "Analysis", book_path(@book, section: "analysis") %></p>
+      <%= link_to "Description", book_path(@book, section: "description" ) %>
+      <%= link_to "Author", book_path(@book, section: "author") %>
+      <%= link_to "Financials", book_path(@book, section: "financial") %>
+      <%= link_to "Analysis", book_path(@book, section: "analysis") %>
     </div>
 
     <div class="content-section">
