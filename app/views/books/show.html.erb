@@ -1,6 +1,51 @@
 <div class="container">
   <h1><%= @book.title %></h1>
 
+  <section class="d-flex justify-content-between">
+
+    <div class="image-card">
+      <img src="https://mpd-biblio-covers.imgix.net/9781250847959.jpg?" alt="image">
+    </div>
+
+    <div class="description">
+      <h2><%= @book.title %></h2>
+
+      <ul class="list-group list-group-flush mt-3">
+        <li class="list-group-item">Author: Remco Jonk</li>
+        <li class="list-group-item">Price: € <%= @book.value %></li>
+        <li class="list-group-item">Category: <%= @book.category %></li>
+      </ul>
+
+      <div class="d-flex justify-content-between">
+        <button class="button-grey">Sell<%=  %></button>
+        <button class="button-white">Buy<%=  %></button>
+      </div>
+    </div>
+  </section>
+
+  <div class="info-section">
+    <div class="navigation-bar">
+      <p><%= link_to "Description", book_path(@book, section: "description" ) %></p>
+      <p><%= link_to "Author", book_path(@book, section: "author") %></p>
+      <p><%= link_to "Financials", book_path(@book, section: "financial") %></p>
+      <p><%= link_to "Analysis", book_path(@book, section: "analysis") %></p>
+    </div>
+
+    <div class="content-section">
+
+      <% case @section %>
+        <% when "description" %>
+          <%= render "shared/description", book: @book %>
+        <% when "author" %>
+          <%= render "shared/author", book: @book %>
+        <% when "financial" %>
+          <%= render "shared/financial", book: @book %>
+        <% else "analysis"%>
+          <%= render "shared/analysis", book: @book %>
+      <% end %>
+
+    </div>
+  </div>
   <%= link_to "Change your book", edit_book_path(@book) %>
   <%= link_to "Back to books", books_path %>
 </div>

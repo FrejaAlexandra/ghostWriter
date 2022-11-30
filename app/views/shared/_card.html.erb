@@ -1,9 +1,9 @@
 
-<%= link_to "#", style: "text-decoration: none;" do %>
-<div class="card" style="<%= width %>">
+<%= link_to book_path(book), style: "text-decoration: none;" do %>
+<div class="card grid-item" style="<%= width %>">
   <div class="growth">
-    <p>+ 3.6%</p>
-    <p>€ 3.5</p>
+    <p>+ 3,6 %</p>
+    <p>€ 3,53</p>
   </div>
 
   <div class="d-flex">
@@ -12,10 +12,13 @@
     </div>
 
     <div class="book-info">
-      <h1>Truly Madly</h1>
-      <h4></h4>
-      <% text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco." %>
-      <p><%= text.first(150) %>...</p>
+      <h3><%= book.title %></h3>
+      <small><%= book.user.email %></small>
+      <% if book.description.length > 150 %>
+        <p><%= book.description.first(150) %>...</p>
+      <% else %>
+        <p><%= book.description%></p>
+      <% end %>
     </div>
   </div>
 
@@ -23,7 +26,6 @@
         <p>Queer Author</p>
         <P>Cerebral</P>
         <p>Classic</p>
-    </div>
   </div>
 </div>
 <% end %>

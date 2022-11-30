@@ -3,6 +3,7 @@ require "faker"
 
 puts "Creating users..."
 
+
 User.create!(
   first_name: "Remco",
   last_name: "Jonk",
@@ -12,6 +13,7 @@ User.create!(
 
 cat = ["horror", "romance", "erotica"]
 
+
 puts "Destroying books..."
 Book.destroy_all
 puts "Creating books..."
@@ -19,7 +21,6 @@ puts "Creating books..."
 # book_cover = ["https://mpd-biblio-covers.imgix.net/9781250847959.jpg?"]
 
 25.times do
-
   @book = Book.create!(
     user_id: User.last.id,
     title: Faker::Book.title,
