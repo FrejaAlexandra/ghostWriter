@@ -3,21 +3,20 @@ require "faker"
 
 puts "Creating users..."
 
+User.create!(
+  first_name: "Remco",
+  last_name: "Jonk",
+  email: "remcojonk@hotmail.com",
+  password: "123456"
+)
 
-cat = ["fsaf", "ddfdsfd"]
-
-# User.create!(
-#   first_name: Faker::Name.neutral_first_name,
-#   last_name: Faker::Name.last_name,
-#   email: Faker::Internet.email(name: 'sam smith', separators: ['-'], domain: 'gmail'),
-#   password: Faker::Internet.password
-# )
+cat = ["horror", "romance", "erotica"]
 
 puts "Destroying books..."
 Book.destroy_all
 puts "Creating books..."
 
-book_cover = ["https://mpd-biblio-covers.imgix.net/9781250847959.jpg?"]
+# book_cover = ["https://mpd-biblio-covers.imgix.net/9781250847959.jpg?"]
 
 25.times do
 

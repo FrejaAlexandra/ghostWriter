@@ -4,3 +4,16 @@
   <%= link_to "Change your book", edit_book_path(@book) %>
   <%= link_to "Back to books", books_path %>
 </div>
+
+
+<h1><%= @book.name %></h1>
+
+
+# Search field tag
+<h3>Related Books</h3>
+<ul>
+  <% @related_books.each do |r| %>
+    <li><%= r.title %></li>
+  <% end %>
+</ul>
+#End
