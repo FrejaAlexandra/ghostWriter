@@ -1,8 +1,9 @@
 require "open-uri"
 require "faker"
 
+puts "Destroying users."
+User.destroy_all
 puts "Creating users..."
-
 
 User.create!(
   first_name: "Remco",
@@ -12,7 +13,6 @@ User.create!(
 )
 
 cat = ["horror", "romance", "erotica"]
-
 
 puts "Destroying books..."
 Book.destroy_all
