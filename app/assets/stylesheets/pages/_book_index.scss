@@ -7,3 +7,15 @@
   grid-template-columns: 1fr 1fr 1fr;
   padding: 10px;
 }
+
+.title {
+  margin-top: 100px;
+  font-family: $headers-font;
+  font-size: 300px;
+}
+
+.search-bar {
+  width: 40%;
+  margin-top: 100px;
+
+}

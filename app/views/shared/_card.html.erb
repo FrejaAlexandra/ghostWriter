@@ -8,7 +8,12 @@
 
   <div class="d-flex">
     <div>
+    <% if book.photo.present? %>
+      <%= cl_image_tag book.photo.key, class: "book-cover"%>
+    <% else %>
       <img src="https://mpd-biblio-covers.imgix.net/9781250847959.jpg?" class="book-cover" alt="book-cover">
+    <% end %>
+
     </div>
 
     <div class="book-info">

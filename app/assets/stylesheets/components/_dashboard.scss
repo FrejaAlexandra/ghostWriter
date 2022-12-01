@@ -1,5 +1,7 @@
 .dashboard {
   position: fixed;
+  right: 205px;
+  top: 90px;
   display: flex;
   width: 35vw;
   height: 20vh;
@@ -10,7 +12,7 @@
   color: $greyscale-5;
   background-color: $white;
   box-shadow: 10px 10px $greyscale-2;
-  // box-shadow: ;
+  z-index: 1;
 }
 
 .portfolio-value {
