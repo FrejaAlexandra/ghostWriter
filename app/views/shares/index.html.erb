@@ -1,13 +1,20 @@
 <div class="container">
 <h1>Portfolio</h1>
+
+
   <div class="portfolio">
     <div class="row">
-      <div class="col-4">Amount</div>
-      <div class="col-4">Graphic</div>
-      <div class="col-4">Value</div>
+      <div class="col-4">
+        <% @shares.each do |share| %>
+          <p> <%= share.book.title %></p>
+          <p>Share value: €<%= share.share_value %></p>
+          <p>Amount: <%= share.share_amount %></p>
+        <% end %>
+      </div>
     </div>
   </div>
 
   <div class="share-container">
+    <%= link_to "Back tobooks", books_path, class: "button-white" %>
   </div>
 </div>

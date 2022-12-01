@@ -7,7 +7,7 @@
   <%= f.input :author_description, label: "Can you tell us a little bit about yourself?", placeholder: "Max 500 characters" %>
   <%= f.input :example, label: "Here you can paste in an extract of your book for potential investors to read...", placeholder: "Max 1000 characters" %>
   <%= f.input :photo, label: "Please upload your cover art...", as: :file %>
-  <%= link_to root_path
+
   <%= link_to root_path, class: "custom-label cursor-pointer" do %>
   <%= "What are the costs of publishing your book? <strong>click here for information on the costs of self publication</strong>".html_safe %>
   <% end %>

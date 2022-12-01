@@ -23,7 +23,7 @@ puts "Creating books..."
     user_id: User.last.id,
     title: Faker::Book.title,
     description: Faker::JapaneseMedia::StudioGhibli.quote,
-    value: 45,
+    value: 4500,
     shares: 50,
     example: Faker::Quotes::Rajnikanth
   )

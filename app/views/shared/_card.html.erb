@@ -14,8 +14,8 @@
     <div class="book-info">
       <h3><%= book.title %></h3>
       <small><%= book.user.email %></small>
-      <% if book.description.length > 150 %>
-        <p><%= book.description.first(150) %>...</p>
+      <% if book.description.length > 100 %>
+        <p><%= book.description.first(100) %>...</p>
       <% else %>
         <p><%= book.description%></p>
       <% end %>
