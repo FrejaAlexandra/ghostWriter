@@ -12,8 +12,6 @@ User.create!(
   password: "123456"
 )
 
-cat = ["horror", "romance", "erotica"]
-
 puts "Destroying books..."
 Book.destroy_all
 puts "Creating books..."
