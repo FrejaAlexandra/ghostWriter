@@ -1,12 +1,8 @@
 <div>
   <%= render "shared/dashboard", width: "width: 800px;" %>
-  <%= link_to "Place your own book", new_book_path %>
-
-    <div class="title">
-      <h1>All books</h1>
-    </div>
 
   <div class="container">
+      <h1 class="title">All books</h1>
     <div class="search-bar" data-controller="search-books">
         <%= form_with url: books_path, method: :get, html: {class:
           "mb-4", data: {search_books_target: "form"}} do |f| %>
@@ -32,12 +28,3 @@
 
   </div>
 </div>
-
-<% @books.each do |r| %>
-  <h2><%= r.title %></h2>
-  <p>
-    <% r.tag_list.each do |tag| %>
-      <%= link_to tag, tagged_path(tag: tag) %>
-    <% end %>
-  </p>
-<% end %>

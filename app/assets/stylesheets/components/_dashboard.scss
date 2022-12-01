@@ -29,4 +29,7 @@
 .grid-dashboard-items {
   display: flex;
   flex-direction: column;
-  align-items: center;}
+  align-items: center;
+  border-left: solid;
+  border-right: solid;
+}

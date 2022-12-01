@@ -1,7 +1,19 @@
-.button-white {
+.button-white-vertical {
   width: 90px;
   border-left: solid 1px $greyscale-3;
   border-right: solid 1px $greyscale-3;
+  background-color: $greyscale-1;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  text-align: center;
+  justify-content: center;
+  padding: 5px 10px;
+}
+
+.button-white-horizontal {
+  width: 90px;
+  border-top: solid 1px $greyscale-3;
+  border-bottom: solid 1px $greyscale-3;
   background-color: $greyscale-1;
   font-family: Roboto, sans-serif;
   font-weight: 500;
