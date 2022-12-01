@@ -24,7 +24,6 @@ puts "Creating books..."
   @book = Book.create!(
     user_id: User.last.id,
     title: Faker::Book.title,
-    category: cat.sample,
     description: Faker::JapaneseMedia::StudioGhibli.quote,
     value: 45,
     shares: 50,
