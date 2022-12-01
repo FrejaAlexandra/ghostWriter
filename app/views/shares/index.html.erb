@@ -1,13 +1,59 @@
 <div class="container">
-<h1>Portfolio</h1>
+
   <div class="portfolio">
-    <div class="row">
-      <div class="col-4">Amount</div>
-      <div class="col-4">Graphic</div>
-      <div class="col-4">Value</div>
+    <h1>Portfolio</h1>
+    <% sum = 0 %>
+    <% @shares.each do |share| %>
+          <% total_value = (share.share_value.to_f * share.share_amount.to_f) %>
+          <% sum += total_value %>
+    <% end %>
+
+    <div class="container d-flex">
+      <div class="secition-left col-4">
+        <p>Wallet</p>
+        <p>€<%= sum %></p>
+        <p>Cash</p>
+        <p>€75</p>
+        <p>Total Balance</p>
+        <p>€5075</p>
+      </div>
+        <div class="section-middle col-4 text-center">
+          <img src="https://www.fireblog.nl/wp-content/uploads/2019/12/SP10yr-1.jpg" alt="" style="width: 100%">
+        </div>
+      <div class="section-right col-4 text-end">
+        <p>Daily profit</p>
+        <p>€52,-</p>
+        <p>Total profit</p>
+        <p>€750</p>
+        <p>Total profit %/p>
+        <p>25%</p>
+      </div>
     </div>
   </div>
 
   <div class="share-container">
+  <h2>My shares</h2>
+      <div class="card-table">
+      <table>
+        <tr style="background-color: grey; color: white;">
+          <th>Book Title</th>
+          <th>Shares</th>
+          <th>Share value</th>
+          <th>P&L %</th>
+          <th>Total</th>
+        </tr>
+          <% @shares.each do |share| %>
+            <tr>
+            <th><%= share.book.title %></th>
+            <th><%= share.share_amount %></th>
+            <th>€ <%= share.share_value %></th>
+            <th>P&L &</th>
+            <% total_value = (share.share_value.to_f * share.share_amount.to_f) %>
+            <th>€ <%= total_value %></th>
+          </tr>
+        <% end %>
+      </table>
+    </div>
+    <%= link_to "Back tobooks", books_path, class: "button-white" %>
   </div>
 </div>

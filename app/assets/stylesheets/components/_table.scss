@@ -1,0 +1,21 @@
+.card-table{
+  background-color: white;
+  border-radius: 10px;
+  border-collapse: collapse;
+  margin: 10px 0;
+  overflow: hidden;
+}
+
+table{
+  width: 100%;
+
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+}

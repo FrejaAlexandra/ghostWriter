@@ -11,6 +11,7 @@
         <%= form_with url: books_path, method: :get, html: {class:
           "mb-4", data: {search_books_target: "form"}} do |f| %>
           <%= f.text_field :query,
+
                     class: "form-control",
                     placeholder: "Horror, Mystery, Strong female lead etc...",
                     value: params[:query],

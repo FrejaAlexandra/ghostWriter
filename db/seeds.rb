@@ -43,6 +43,7 @@ book_cover = ["https://img.theculturetrip.com/450x/smart/images/56-3972722-51zvc
   book = Book.new(
     user_id: User.last.id,
     title: Faker::Book.title,
+
     psuedoname: Faker::Name.name_with_middle,
     description: Faker::Lorem.sentence(word_count: 500, supplemental: true),
     value: 45,
