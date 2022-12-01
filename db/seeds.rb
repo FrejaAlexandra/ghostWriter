@@ -12,8 +12,6 @@ User.create!(
   password: "123456"
 )
 
-cat = ["horror", "romance", "erotica"]
-
 puts "Destroying books..."
 Book.destroy_all
 puts "Creating books..."
@@ -24,7 +22,6 @@ puts "Creating books..."
   @book = Book.create!(
     user_id: User.last.id,
     title: Faker::Book.title,
-    category: cat.sample,
     description: Faker::JapaneseMedia::StudioGhibli.quote,
     value: 45,
     shares: 50,
