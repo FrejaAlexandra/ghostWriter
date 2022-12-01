@@ -8,6 +8,8 @@ class BooksController < ApplicationController
     @section = params[:section] || 'description'
     @related_books = @book.find_related_tags
     @share = Share.new
+
+    @my_shares = Share.find_by(user_id: current_user.id, book_id: @book.id).share_amount
   end
 
   def new
