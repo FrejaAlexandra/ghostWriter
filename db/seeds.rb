@@ -22,10 +22,11 @@ puts "Creating books..."
   @book = Book.create!(
     user_id: User.last.id,
     title: Faker::Book.title,
-    description: Faker::JapaneseMedia::StudioGhibli.quote,
+    psuedoname: Faker::Name.name_with_middle,
+    description: Faker::Lorem.sentence(word_count: 500, supplemental: true),
     value: 45,
     shares: 50,
-    example: Faker::Quotes::Rajnikanth
+    example: Faker::Lorem.sentence(word_count: 1000, supplemental: true),
   )
   puts @book.title
 end

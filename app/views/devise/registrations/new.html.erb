@@ -6,8 +6,8 @@
 
     <div class="form-inputs">
       <div class="d-flex justify-content-between">
-        <%= f.input :first_name %>
-        <%= f.input :last_name %>
+        <%= f.input :first_name, input_html: { class: "names" } %>
+        <%= f.input :last_name, input_html: { class: "names" } %>
         <%= f.input :pronouns, :collection => [:male, :female, :nonbinary] %>
       </div>
         <%= f.input :email,
