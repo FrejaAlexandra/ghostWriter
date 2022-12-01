@@ -1,21 +1,26 @@
 
 <%= link_to book_path(book), style: "text-decoration: none;" do %>
-<div class="card grid-item" style="<%= width %>">
+<div class="my-card grid-item" style="<%= width %>">
   <div class="growth">
     <p>+ 3,6 %</p>
     <p>€ 3,53</p>
   </div>
 
   <div class="d-flex">
-    <div class="image-upoad justify-content-between">
-      <img src="https://mpd-biblio-covers.imgix.net/9781250847959.jpg?" alt="book-cover" height="230px">
+    <div>
+    <% if book.photo.present? %>
+      <%= cl_image_tag book.photo.key, class: "book-cover"%>
+    <% else %>
+      <img src="https://mpd-biblio-covers.imgix.net/9781250847959.jpg?" class="book-cover" alt="book-cover">
+    <% end %>
+
     </div>
 
     <div class="book-info">
-      <h3><%= book.title %></h3>
-      <small><%= book.user.email %></small>
-      <% if book.description.length > 150 %>
-        <p><%= book.description.first(150) %>...</p>
+      <h4><%= book.title %></h4>
+      <small><%= book.psuedoname %></small>
+      <% if book.description.length > 100 %>
+        <p><%= book.description.first(100) %>...</p>
       <% else %>
         <p><%= book.description%></p>
       <% end %>

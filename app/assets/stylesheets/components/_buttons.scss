@@ -1,10 +1,10 @@
 .button-white {
   width: 90px;
-  border: solid 1px $greyscale-3;
+  border-left: solid 1px $greyscale-3;
+  border-right: solid 1px $greyscale-3;
   background-color: $greyscale-1;
   font-family: Roboto, sans-serif;
   font-weight: 500;
-  border-radius: 15px;
   text-align: center;
   justify-content: center;
   padding: 5px 10px;
@@ -17,7 +17,6 @@
   font-family: Roboto, sans-serif;
   color: $white;
   font-weight: 500;
-  border-radius: 15px;
   text-align: center;
   justify-content: center;
   padding: 5px 10px;
