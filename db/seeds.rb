@@ -43,14 +43,13 @@ book_cover = ["https://img.theculturetrip.com/450x/smart/images/56-3972722-51zvc
   book = Book.new(
     user_id: User.last.id,
     title: Faker::Book.title,
-
     psuedoname: Faker::Name.name_with_middle,
     description: Faker::Lorem.sentence(word_count: 500, supplemental: true),
     value: 45,
-    shares: 50,
+    total_amount: 50,
     example: Faker::Lorem.sentence(word_count: 1000, supplemental: true),
   )
   book.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
-  book.save
+  book.save!
   puts book.title
 end
