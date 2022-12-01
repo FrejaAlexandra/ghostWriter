@@ -1,11 +1,9 @@
 class BooksController < ApplicationController
-
   def index
     @books = Book.all
   end
 
   def show
-
     @book = Book.find(params[:id])
     @section = params[:section] || 'description'
     @related_books = @book.find_related_tags

@@ -10,6 +10,9 @@ class SharesController < ApplicationController
     @book = Book.find(params[:book_id])
     @share.share_value = @book.value
     @share.book = @book
+
+    @book.total_amount = @book.total_amount - @share.share_amount
+    @book.save
     if @share.save
       redirect_to book_path(@book)
     else
@@ -17,6 +20,9 @@ class SharesController < ApplicationController
     end
   end
 
+  def calculator
+    @share.share_value
+  end
 
   private
 
