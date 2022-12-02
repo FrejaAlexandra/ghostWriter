@@ -15,7 +15,7 @@
         <ul class="list-group list-group-flush mt-3">
           <li class="list-group-item">Author: Remco Jonk</li>
           <li class="list-group-item">Price: € <%= @share_value.round(2).to_s.gsub(".", ",") %></li>
-           <li class="list-group-item">Book value <%= @book.value %></li>
+          <li class="list-group-item">Book value <%= @book.value %></li>
           <li class="list-group-item">Shares own: <%= @share_amount %></li>
           <li class="list-group-item">Shares availible: <%= @book.total_amount %></li>
         </ul>
