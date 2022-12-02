@@ -5,18 +5,14 @@
   display: grid;
   width: 100%;
   gap: 45px;
-  // align-content: space-evenly;
-  //grid-template-columns: auto auto auto;
   grid-template-columns: 1fr 1fr 1fr;
 }
 
 .all-books {
-  // position: relative;
   display: flex;
   justify-content: space-between;
 
   .dashboard {
-    // position: absolute;
     right: 0px;
     top: 0px;
   }
