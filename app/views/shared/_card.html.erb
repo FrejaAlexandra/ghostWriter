@@ -17,10 +17,9 @@
     </div>
 
     <div class="book-info">
-      <div class="author-title">
-        <h4><%= book.title %></h4>
-        <%= book.psuedoname %>
-      </div>
+
+      <h4><%= book.title %></h4>
+      <small><%= book.psuedoname %></small>
       <% if book.description.length > 100 %>
         <p><%= book.description.first(100) %>...</p>
       <% else %>

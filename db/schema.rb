@@ -46,7 +46,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_01_141832) do
     t.string "title"
     t.string "description"
     t.integer "value"
-    t.integer "shares"
+    t.integer "total_amount"
     t.text "example"
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false

@@ -18,7 +18,13 @@
 
   a {
     text-decoration: none;
-    color: $greyscale-4;;
+    color: $greyscale-4;
+    border: solid 0.5px rgb(79, 79, 79);
+    padding: 10px 20px;
+
+    :hover {
+      color: $greyscale-6;
+    }
   }
 }
 
@@ -29,4 +35,10 @@
   padding: 15px 20px;
   scroll-behavior: smooth;
   overflow: scroll;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }

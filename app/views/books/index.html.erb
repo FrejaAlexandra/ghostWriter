@@ -1,7 +1,26 @@
-<div class="container">
-  <div class="all-books">
-      <div>
-        <h1 class="title">All<br>books</h1>
+<div>
+  <%= render "shared/dashboard", width: "width: 800px;" %>
+  <%= link_to "Place your own book", new_book_path %>
+
+    <div class="title">
+      <h1>All books</h1>
+    </div>
+
+  <div class="container">
+    <div class="search-bar" data-controller="search-books">
+        <%= form_with url: books_path, method: :get, html: {class:
+          "mb-4", data: {search_books_target: "form"}} do |f| %>
+          <%= f.text_field :query,
+
+                    class: "form-control",
+                    placeholder: "Horror, Mystery, Strong female lead etc...",
+                    value: params[:query],
+                    data: {search_books_target: "input"} %>
+        <% end %>
+    </div>
+      <div class="d-flex flex-row">
+        <div class=button-white>Filter</div>
+        <div class=button-white>Filter</div>
       </div>
     <%= render "shared/dashboard", width: "width: 800px;", class: "dashboard" %>
   </div>
