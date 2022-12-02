@@ -1,5 +1,6 @@
 <div class="container">
   <h1><%= @book.title %></h1>
+  <h2><%= @book.psuedoname %></h2>
 
   <section class="d-flex justify-content-between">
 
@@ -10,10 +11,8 @@
     <% end %>
 
     <div class="description">
-      <h2><%= @book.title %></h2>
 
       <ul class="list-group list-group-flush mt-3">
-        <li class="list-group-item">Author: Remco Jonk</li>
         <li class="list-group-item">Price: € <%= @book.value %></li>
       </ul>
 
@@ -47,19 +46,6 @@
 
     </div>
   </div>
-  <%= link_to "Change your book", edit_book_path(@book) %>
-  <%= link_to "Back to books", books_path %>
+  <%= link_to "Edit", edit_book_path(@book) %>
+  <%= link_to "Back", books_path %>
 </div>
-
-
-<h1><%= @book.title %></h1>
-
-
-# Search field tag
-<h3>Related Books</h3>
-<ul>
-  <% @related_books.each do |r| %>
-    <li><%= r.title %></li>
-  <% end %>
-</ul>
-#End

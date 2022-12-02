@@ -1,3 +1,6 @@
+.container {
+}
+
 .grid-container {
   display: grid;
   width: 100%;
@@ -5,15 +8,31 @@
   // align-content: space-evenly;
   //grid-template-columns: auto auto auto;
   grid-template-columns: 1fr 1fr 1fr;
-  padding: 10px;
+}
+
+.all-books {
+  // position: relative;
+  display: flex;
+  justify-content: space-between;
+
+  .dashboard {
+    // position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+}
+
+
+.search-parameters {
+  display: flex;
+  flex-direction: column;
 }
 
 .title {
   font-family: $headers-font;
-  font-size: 100px;
+  font-size: 80px;
 }
 
 .search-bar {
   width: 40%;
-
 }

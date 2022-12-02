@@ -1,23 +1,22 @@
-.dashboard {
-  position: fixed;
-  right: 205px;
-  top: 90px;
+.dashboard-container {
   display: flex;
   width: 35vw;
-  height: 20vh;
+  height: 15vh;
   border-radius: 5px;
   padding: 10px;
   flex-direction: column;
   border: solid;
+  border-color: $greyscale-2;
   color: $greyscale-5;
   background-color: $white;
-  box-shadow: 10px 10px $greyscale-2;
+  box-shadow: 5px 5px $greyscale-2;
   z-index: 1;
 }
 
 .portfolio-value {
   display: flex;
   flex-direction: row;
+  justify-content: flex-end;
 }
 
 .grid-dashboard {
@@ -26,10 +25,8 @@
   justify-content: space-around;
 }
 
-.grid-dashboard-items {
+.grid-dashboard-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-left: solid;
-  border-right: solid;
 }
