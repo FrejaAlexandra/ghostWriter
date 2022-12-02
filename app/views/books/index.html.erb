@@ -22,23 +22,29 @@
         <div class=button-white>Filter</div>
         <div class=button-white>Filter</div>
       </div>
-
-    <div class="grid-container">
-
-      <% @books.each do |book| %>
-        <%= render "shared/card", width: "", book: book %>
+    <%= render "shared/dashboard", width: "width: 800px;", class: "dashboard" %>
+  </div>
+    <div class="search-parameters">
+      <%= form_with url: books_path, method: :get, html: {class:
+        "mb-4", data: {search_books_target: "form"}} do |f| %>
+        <%= f.text_field :query,
+                  class: "form-control",
+                  placeholder: "Horror, Mystery, Strong female lead etc...",
+                  value: params[:query],
+                  data: {search_books_target: "input"} %>
       <% end %>
-
+  </div>
+    <div class="d-flex flex-row">
+      <div class=button-white>Filter</div>
+      <div class=button-white>Filter</div>
     </div>
 
-  </div>
-</div>
+  <div class="grid-container">
 
-<% @books.each do |r| %>
-  <h2><%= r.title %></h2>
-  <p>
-    <% r.tag_list.each do |tag| %>
-      <%= link_to tag, tagged_path(tag: tag) %>
+    <% @books.each do |book| %>
+      <%= render "shared/card", width: "", book: book %>
     <% end %>
-  </p>
-<% end %>
+
+  </div>
+
+</div>

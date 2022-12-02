@@ -1,0 +1,18 @@
+.footer {
+  height: 100px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: $white;
+  border: solid;
+  border-color: $greyscale-2;
+  box-shadow: 2px 2px $greyscale-2;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 22px;
+  padding-left: 15px;
+  padding-right: 15px;
+  z-index: 1;
+}
