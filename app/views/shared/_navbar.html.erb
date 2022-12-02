@@ -5,11 +5,6 @@
           <%= link_to "Ghostwriter", root_path , class: "nav-link" %>
       </div>
 
-      <% if user_signed_in? %>
-        <div class="home">
-            <%= link_to "Home", root_path , class: "nav-link" %>
-        </div>
-
         <div class="learn-about">
             <%= link_to "Our Mission", "#", class: "nav-link" %>
             <%= link_to "More On Self Publication", "#", class: "nav-link" %>
@@ -20,6 +15,7 @@
             <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "My portfolio",  book_shares_path(:book_id), class: "dropdown-item" %>
+              <%= link_to "Books", books_path, class: "dropdown-item"%>
               <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
             </div>
         </div>
@@ -27,14 +23,4 @@
           <%= link_to "Login", new_user_session_path, class: "nav-link" %>
       <% end %>
 
-      <div class="dropdown">
-          <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-          <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-            <%= link_to "My profile", "#", class: "dropdown-item" %>
-            <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
-          </div>
-      </div>
-    <% else %>
-        <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-    <% end %>
 </div>
