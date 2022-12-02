@@ -2,8 +2,8 @@
   position: fixed;
   width: 100%;
   background: $white;
-  border: solid;
-  box-shadow: 5px 5px $greyscale-2;
+  border-color: $greyscale-2;
+  box-shadow: 2px 2px $greyscale-2;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
