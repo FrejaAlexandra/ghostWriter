@@ -1,7 +1,7 @@
 .dashboard-container {
   display: flex;
   width: 35vw;
-  height: 15vh;
+  height: 20vh;
   border-radius: 5px;
   padding: 10px;
   flex-direction: column;
@@ -11,18 +11,21 @@
   background-color: $white;
   box-shadow: 5px 5px $greyscale-2;
   z-index: 1;
+  font-family: $headers-font;
 }
 
 .portfolio-value {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+  border-bottom: solid $greyscale-2;
 }
 
 .grid-dashboard {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  padding: 15px;
 }
 
 .grid-dashboard-item {
