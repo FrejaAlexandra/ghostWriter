@@ -1,8 +1,8 @@
 .footer {
   height: 100px;
-  left: 0;
-  bottom: 0;
+  position: absolute;
   width: 100%;
+  left: 0;
   background: $white;
   border: solid;
   border-color: $greyscale-2;
