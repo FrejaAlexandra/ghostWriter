@@ -10,7 +10,6 @@ class SharesController < ApplicationController
     @book = Book.find(params[:book_id])
     @share.share_value = @book.value
     @share.book = @book
-
     @book.total_amount = @book.total_amount - @share.share_amount
     @book.save
     if @share.save

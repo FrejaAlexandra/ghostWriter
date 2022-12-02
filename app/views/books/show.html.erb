@@ -14,8 +14,9 @@
 
         <ul class="list-group list-group-flush mt-3">
           <li class="list-group-item">Author: Remco Jonk</li>
-          <li class="list-group-item">Price: € <%= @book.value %></li>
-          <li class="list-group-item">Shares own: <%= @my_shares %></li>
+          <li class="list-group-item">Price: € <%= @share_value.round(2).to_s.gsub(".", ",") %></li>
+           <li class="list-group-item">Book value <%= @book.value %></li>
+          <li class="list-group-item">Shares own: <%= @share_amount %></li>
           <li class="list-group-item">Shares availible: <%= @book.total_amount %></li>
         </ul>
       </div>
@@ -23,6 +24,7 @@
       <div class="d-flex justify-content-between">
         <%= simple_form_for [@book, @share] do |f| %>
         <%= f.input :share_amount, input_html: { value: 0 }, label: "Select amount of shares" %>
+        <%= f.submit value: "sell", class: "button-white" %>
         <%= f.submit value: "buy", class: "button-grey" %>
         <% end %>
       </div>
