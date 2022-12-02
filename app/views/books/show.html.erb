@@ -1,7 +1,4 @@
-<div class="container mt-5">
-  <h1><%= @book.title %></h1>
-  <h2><%= @book.psuedoname %></h2>
-
+<div class="container">
   <section class="d-flex justify-content-between">
 
     <% if @book.photo.present? %>
@@ -12,24 +9,36 @@
 
     <div class="description">
       <div>
-        <h2><%= @book.title %></h2>
+        <h1><%= @book.title %></h1>
+        <h5><i>By <%= @book.psuedoname %></i></h5>
 
+          <div class="value-list">
+            <div class="value-list-item">
+              <p>Price</p>
+              <%= @share_value.round(2).to_s.gsub(".", ",") %>
+            </div>
+            <div class="value-list-item">
+              <p>Book value</p>
+              <%= @book.value %>
+            </div>
+            <div class="value-list-item">
+              <p>Shares own:</p>
+              <%= @share_amount %>
+            </div>
+            <div class="value-list-item">
+              <p>Shares availible:</p>
+              <%= @book.total_amount %>
+            </div>
+          </div>
+        </div>
 
-        <ul class="list-group list-group-flush mt-3">
-          <li class="list-group-item">Author: Remco Jonk</li>
-          <li class="list-group-item">Price: € <%= @share_value.round(2).to_s.gsub(".", ",") %></li>
-          <li class="list-group-item">Book value <%= @book.value %></li>
-          <li class="list-group-item">Shares own: <%= @share_amount %></li>
-          <li class="list-group-item">Shares availible: <%= @book.total_amount %></li>
-        </ul>
-      </div>
-      
-      <div class="d-flex justify-content-between">
+      <div class="d-flex justify-content-between align-items-center">
         <%= simple_form_for [@book, @share] do |f| %>
         <%= f.input :share_amount, input_html: { value: 0 }, label: "Select amount of shares" %>
-        <%= f.submit value: "sell", class: "button-white" %>
-        <%= f.submit value: "buy", class: "button-grey" %>
+        <%= f.submit value: "BUY", class: "button-green" %>
+        <%= f.submit value: "SELL", class: "button-red" %>
         <% end %>
+          <img class="stock-image" src="https://img.freepik.com/premium-vector/forex-trading-stock-market-candlestick-chart-investment-vector-illustration_618588-249.jpg?w=1380" alt="stock-image">
       </div>
     </div>
   </section>
@@ -41,7 +50,6 @@
       <%= link_to "Financials", book_path(@book, section: "financial") %>
       <%= link_to "Analysis", book_path(@book, section: "analysis") %>
     </div>
-
     <div class="content-section">
 
       <% case @section %>
