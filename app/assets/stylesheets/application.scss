@@ -11,8 +11,8 @@
 @import "components/index";
 @import "pages/index";
 
-.check_boxes {
-  // display: flex;
-  display: grid !important;
-  grid-template-columns: repeat(3, 1fr) !important;
+
+
+body {
+ background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);;
 }

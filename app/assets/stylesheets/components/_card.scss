@@ -1,12 +1,12 @@
 .my-card {
   position: relative;
-  height: 300px;
+  height: 40vh;
   border-radius: 10px;
-  border: solid;
-  border-color: $greyscale-2;
+ // border: solid;
+ // border-color: $greyscale-2;
   color: $greyscale-5;
   background-color: $white;
-  box-shadow: 5px 5px $greyscale-2;
+  box-shadow: 2px px $greyscale-2;
   padding: 20px;
 
   .growth {
