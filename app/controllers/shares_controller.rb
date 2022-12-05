@@ -1,5 +1,4 @@
 class SharesController < ApplicationController
-
   def index
     @shares = current_user.shares
   end
@@ -10,10 +9,11 @@ class SharesController < ApplicationController
     @share.share_value = @book.current_share_value
     @share.user = current_user
     @share.book = @book
+
     if params[:buy]
-      @book.current_share_value = ( 1 + @share.share_amount/100) * (@book.current_share_value * rand(1.01...1.05))
+      @book.current_share_value = (1 + @share.share_amount/100) * (@book.current_share_value * rand(1.01...1.05))
     elsif params[:sell]
-      @book.current_share_value = ( 1 + @share.share_amount/100) * (@book.current_share_value * rand(0.95...0.99))
+      @book.current_share_value = (1 + @share.share_amount/100) * (@book.current_share_value * rand(0.95...0.99))
       @share.share_amount = -@share.share_amount
     end
     @book.save
@@ -23,15 +23,6 @@ class SharesController < ApplicationController
       render :new, status: :unprocessable_entity
     end
   end
-
-  # def edit
-  #   @share = Share.find(params[:id])
-  #   @share.user = current_user
-  # end
-
-  # def update
-  #   @share = Share.find(params[:id])
-  # end
 
   private
 

@@ -46,7 +46,7 @@ book_cover = ["https://img.theculturetrip.com/450x/smart/images/56-3972722-51zvc
     title: Faker::Book.title,
     psuedoname: Faker::Name.name_with_middle,
     description: Faker::Lorem.sentence(word_count: 500, supplemental: true),
-    initial_share_value: 2.0,
+    initial_share_value: 1.3,
     total_amount: 4000,
 
     example: Faker::Lorem.sentence(word_count: 1000, supplemental: true)

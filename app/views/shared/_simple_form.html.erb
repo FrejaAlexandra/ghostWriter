@@ -15,6 +15,6 @@
   <%= link_to root_path, class: "custom-label cursor-pointer" do %>
     <%= "How many shares do you want to sell? <strong>click here for information share values</strong>".html_safe %>
   <% end %>
-  <%= f.input :total_amount, :input_html => { value:  1, step: 1 }, label: "How many shares", label: false %>
+  <%= f.input :total_amount, :input_html => { value:  10000, step: 100 }, label: "How many shares", label: false %>
   <%= f.submit value: "Publish" %>
 <% end %>
