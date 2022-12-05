@@ -1,44 +1,57 @@
 .my-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   position: relative;
-  height: 40vh;
+  height: 42vh;
   border-radius: 10px;
- // border: solid;
- // border-color: $greyscale-2;
+  border: solid;
+  border-color: $greyscale-2;
   color: $greyscale-5;
   background-color: $white;
-  box-shadow: 2px px $greyscale-2;
-  padding: 20px;
+  box-shadow: 2px 2px $greyscale-2;
+  padding: 10px;
 
   .growth {
     position: absolute;
     top: 10px;
     right: 10px;
-    font-size: 15px;
-    font-weight: 100;
+    font-size: 18px;
     color: $green;
-    font-family: Roboto, sans-serif;
+    font-family: $dashboard-font;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+
+    p {
+      font-size: 1.5rem;
+      font-weight: 200;
+    }
   }
 
   .book-info{
-    margin: 25px 15px 0 15px;
+    margin: 45px 15px 0 15px;
+    p {
+      overflow: hidden;
+      font-size: 1.0rem;
+    }
   }
 
   .info-bar{
-    position: absolute;
-    bottom: -10px;
     width: 100%;
     display: flex;
     justify-content: space-around;
     font-size: 16px;
     margin-top: auto;
+    p {
+      font-size: 1.0rem;
+    }
   }
 
   .book-cover {
+    margin-top: 20px;
+    margin-left: 10px;
     border-radius: 5px;
     height: 230px;
   }
-
 }

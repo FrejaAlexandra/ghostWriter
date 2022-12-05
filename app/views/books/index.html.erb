@@ -7,20 +7,32 @@
       <%= render "shared/dashboard", width: "width: 800px;" %>
     </div>
   </div>
-  <div class="search-bar">
+    <%# <div class="search-bar">
     <%= form_with url: books_path, method: :get, html: {class:
       "mb-4", data: {search_books_target: "form"}} do |f| %>
-      <%= f.text_field :query,
+      <%#= f.text_field :query,
                 class: "form-control",
-                placeholder: "Horror, Mystery, Strong female lead etc...",
+                placeholder: "Search by title or author...",
                 value: params[:query],
                 data: {search_books_target: "input"} %>
+    <%# end %>
+    <%# </div> %>
+
+    <% cats = [ "Fantasy", "Romance", "Mystery", "Horror", "Thriller", "Paranormal", "Historical Fiction", "Sci-Fi", "Dystopian", "Memoir", "Art", "Self Help", "Motivational", "Health", "History", "Travel Guide", "Cookbook", "Poetry", "Erotic", "Female Author", "Trans Author", "Queer Author", "Non-Binary Author", "POC Author", "Black Author", "Asian Author", "LatinX Author", "Indegenous Author", "Agender Author", "Polysexual Author", "Disabled Author", "Neurodivergent Author", "Literary Prize", "Critically Acclaimed", "Dark", "Cerebral", "Inspiring", "Slow-Burn", "Psychological", "Quirky", "Coming Of Age", "Cultural", "Social Commentary", "Sunday Reading", "Guilty Pleasure", "Strong Female Lead", "Queer Romance", "Manga/Anime", "Graphic Novel", "Children's Book", "Design"] %>
+
+    <%= form_with url: books_path, method: :get, html: {class: "mb-4", data: {search_books_target: "form", controller: "tag-list"}} do |f| %>
+      <div id="checkboxes">
+        <% cats.each do |item| %>
+            <label for="<%= item %>" class="checkbox-tag" data-tag-list-target="checkbox" data-action="click->tag-list#toggleActive">
+            <input name="<%= item %>[<%= item %>]" class="checkbox checkbox-tag-input" type="checkbox" id="<%= item %>"  value="<%= @selected_cats.include?(item)? "1" : "0"%>"><%= item %></label>
+        <% end %>
+
+        <%= f.submit %>
+        <%# <%= f.hidden_field  %>
+      </div>
     <% end %>
-  </div>
-  <div class="d-flex flex-row">
-    <div class=button-white>Filter</div>
-    <div class=button-white>Filter</div>
-  </div>
+
+  <%# </div> %>
 
   <div class="grid-container">
     <% @books.each do |book| %>

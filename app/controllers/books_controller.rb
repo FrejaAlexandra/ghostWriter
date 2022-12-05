@@ -1,6 +1,21 @@
 class BooksController < ApplicationController
+  before_action :set_tags, only: [:index, :new, :update]
+
   def index
     @books = Book.all
+    @selected_cats = []
+    if params.keys.size > 3
+      @selected_cats = params.keys
+      filtered_books = []
+      @books.each do |book|
+        book.tag_list.each do |tag|
+          if @selected_cats.include?(tag)
+            filtered_books << book unless filtered_books.include?(book)
+          end
+        end
+      end
+      @books = filtered_books
+    end
   end
 
   def show
@@ -55,5 +70,9 @@ class BooksController < ApplicationController
 
   def book_params
     params.require(:book).permit(:title, :psuedoname, :author_description, :description, :value, :shares, :photo, :example, tag_list: [])
+  end
+
+  def set_tags
+    @tags = ["Fantasy", "Romance", "Mystery", "Horror", "Thriller", "Paranormal", "Historical Fiction", "Sci-Fi", "Dystopian", "Memoir", "Art", "Self Help", "Motivational", "Health", "History", "Travel Guide", "Cookbook", "Poetry", "Erotic", "Female Author", "Trans Author", "Queer Author", "Non-Binary Author", "POC Author", "Black Author", "Asian Author", "LatinX Author", "Indegenous Author", "Agender Author", "Polysexual Author", "Disabled Author", "Neurodivergent Author", "Literary Prize", "Critically Acclaimed", "Dark", "Cerebral", "Inspiring", "Slow-Burn", "Psychological", "Quirky", "Coming Of Age", "Cultural", "Social Commentary", "Sunday Reading", "Guilty Pleasure", "Strong Female Lead", "Queer Romance" ]
   end
 end
