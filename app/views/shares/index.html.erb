@@ -7,16 +7,14 @@
           <% sum += total_value %>
     <% end %>
 
-    <% user_balance = 0 %>
-
-    <% total_balance = sum + user_balance %>
+    <% total_balance = sum + current_user.balance %>
 
     <div class="portfolio-container">
       <div class="secition-left col-4">
         <p><strong>Wallet</strong></p>
         <p>€<%= sum %></p>
         <p><strong>Cash</strong></p>
-        <p>€ <%= user_balance %></p>
+        <p>€ <%= current_user.balance %></p>
         <p><strong>Total Balance</strong></p>
         <p>€ <%= total_balance %></p>
       </div>

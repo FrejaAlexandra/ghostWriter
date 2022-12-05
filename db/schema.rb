@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_12_03_113536) do
+ActiveRecord::Schema[7.0].define(version: 2022_12_05_110925) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -53,6 +53,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_03_113536) do
     t.datetime "updated_at", null: false
     t.string "author_description"
     t.string "psuedoname"
+    t.float "current_share_value"
+    t.float "initial_share_value"
     t.index ["user_id"], name: "index_books_on_user_id"
   end
 

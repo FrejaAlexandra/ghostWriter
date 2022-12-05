@@ -3,7 +3,10 @@
   flex-direction: column;
   justify-content: space-between;
   position: relative;
-  height: 42vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 40vh;
   border-radius: 10px;
   border: solid;
   border-color: $greyscale-2;
