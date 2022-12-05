@@ -32,8 +32,7 @@
         <%= f.submit value: "SELL", class: "button-red", name: 'sell' %>
         <%= f.submit value: "BUY", class: "button-green", name: 'buy' %>
         <% end %>
-        <%# order_price = @share.share_amount.to_f * @share.share_value %>
-        <p><%#= order_price %></p>
+        
         <img class="stock-image" src="https://img.freepik.com/premium-vector/forex-trading-stock-market-candlestick-chart-investment-vector-illustration_618588-249.jpg?w=1380" alt="stock-image">
       </div>
     </div>
@@ -63,4 +62,4 @@
   </div>
   <%= link_to "Edit", edit_book_path(@book) %>
   <%= link_to "Back", books_path %>
-</div>
+ </div>

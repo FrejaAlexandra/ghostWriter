@@ -1,0 +1,26 @@
+.checkbox {
+  position: absolute;
+  transform: scale(0);
+  background-color: $white;
+  color: $greyscale-4;
+
+}
+
+#checkboxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  .checkbox-tag {
+    cursor: pointer;
+    background-color: $white;
+    border: solid $greyscale-4;
+    border-radius: 10px;
+    color: $greyscale-4;
+    padding: 0.1rem 0.4rem;
+    color: $greyscale-4;
+
+  }
+  .checkbox-tag:has(.checkbox-tag-input:checked){
+      border-color: rgb(193, 81, 92);
+  }
+}
