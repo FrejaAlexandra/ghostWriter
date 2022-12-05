@@ -1,5 +1,4 @@
- <div>
-
+<div class="container">
   <section class="d-flex justify-content-between">
 
     <% if @book.photo.present? %>
@@ -34,8 +33,8 @@
       <div class="d-flex justify-content-between align-items-center">
             <%= simple_form_for [@book, @share] do |f| %>
         <%= f.input :share_amount, input_html: { value: 0 }, label: "Select amount of shares" %>
-        <%= f.submit value: "BUY", class: "button-green" %>
         <%= f.submit value: "SELL", class: "button-red" %>
+        <%= f.submit value: "BUY", class: "button-green" %>
         <% end %>
 
         <img class="stock-image" src="https://img.freepik.com/premium-vector/forex-trading-stock-market-candlestick-chart-investment-vector-illustration_618588-249.jpg?w=1380" alt="stock-image">

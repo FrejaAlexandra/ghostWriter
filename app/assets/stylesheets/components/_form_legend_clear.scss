@@ -25,3 +25,9 @@ a, a:hover {
 .names {
   width: 200% !important;
 }
+
+.check_boxes {
+  // display: flex;
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+}

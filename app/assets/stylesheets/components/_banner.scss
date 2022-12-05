@@ -1,0 +1,27 @@
+.banner {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-origin: content-box;
+  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://www.lehnerinvestments.com/wp-content/uploads/2021/10/Investment_Book-780x438.jpg);
+  height: 75vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-container h1 {
+  font-size: 5rem;
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-weight: bold;
+}
+
+.banner-container p{
+  font-size: 2.5rem;
+  text-align: center;
+  color: white;
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
