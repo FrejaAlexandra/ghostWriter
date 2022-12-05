@@ -1,10 +1,14 @@
 <div class="container">
-  <h1>Add credits to your account</h1>
 
+
+  <div class="balance_form">
+    <h1>Add credits to your account</h1>
+    <div id="balance_form">
       <%= form_with url: user_balance_path, method: :post do |form| %>
       <%= form.label :balance, "Fill in your deposit amount"%>
       <%= form.number_field :balance, in: 50..5000, step: 1 %>
       <%= form.submit "Pay", class: "style=button-grey;" %>
       <% end %>
-
+    </div>
+  </div>
 </div>

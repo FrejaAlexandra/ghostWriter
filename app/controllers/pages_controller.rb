@@ -5,10 +5,6 @@ class PagesController < ApplicationController
   end
 
   def user_balance
-    # balance = params[:balance]
-    # current_user.balance += balance
-    # raise
-    # current_user.save
   end
 
   def add_user_balance
