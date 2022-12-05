@@ -5,12 +5,17 @@ class SharesController < ApplicationController
   end
 
   def create
-    @share = Share.new(share_params)
-    @share.user = current_user
     @book = Book.find(params[:book_id])
-    @share.share_value = @book.value
+    @share = Share.new(share_params)
+    @share.share_value = @book.current_share_value
+    @share.user = current_user
     @share.book = @book
-    @book.total_amount = @book.total_amount - @share.share_amount
+    if params[:buy]
+      @book.current_share_value = ( 1 + @share.share_amount/100) * (@book.current_share_value * rand(1.01...1.05))
+    elsif params[:sell]
+      @book.current_share_value = ( 1 + @share.share_amount/100) * (@book.current_share_value * rand(0.95...0.99))
+      @share.share_amount = -@share.share_amount
+    end
     @book.save
     if @share.save
       redirect_to book_path(@book)
@@ -19,9 +24,14 @@ class SharesController < ApplicationController
     end
   end
 
-  def calculator
-    @share.share_value
-  end
+  # def edit
+  #   @share = Share.find(params[:id])
+  #   @share.user = current_user
+  # end
+
+  # def update
+  #   @share = Share.find(params[:id])
+  # end
 
   private
 

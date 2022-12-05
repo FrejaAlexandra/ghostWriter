@@ -1,5 +1,8 @@
 .my-card {
   position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   height: 40vh;
   border-radius: 10px;
  // border: solid;
