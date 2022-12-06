@@ -1,16 +1,38 @@
 <%= render "shared/banner" %>
 <div class="container">
-  <div id="our-mission">
+  <section id="our-mission">
+    <h2>Our Mission</h2>
     <p>Lorem  laboriosam quaerat veritatis, repudiandae nesciunt laborum! Cum voluptates illum necessitatibus unde, magnam fuga, reiciendis quam quibusdam fugit, ullam nostrum sunt quidem reprehenderit distinctio id tenetur vitae! Beatae consectetur quaerat adipisci sequi, perspiciatis quia quibusdam minus iure corrupti tempore, quae iste et? Animi architecto assumenda molestiae recusandae saepe impedit possimus rem quia tempore, nulla libero vel est, quidem dolorem sequi, repellendus quasi inventore cum. Ea sequi, doloribus nisi ex, necessitatibus sit aspernatur ipsum animi recusandae impedit qui quibusdam rerum. Saepe aperiam atque optio vel omnis. Quo quae eaque, blanditiis labore perspiciatis fugit in reiciendis explicabo! Amet nulla harum voluptatem quo facilis quibusdam ullam accusantium? Non magnam dolores assumenda ipsum aspernatur eum consectetur quam dolorum iste, possimus blanditiis harum! Et, quo architecto obcaecati commodi, quia quod sit, beatae quis aspernatur quaerat earum. Autem amet similique tempora, beatae explicabo magni aliquid corrupti, quaerat sapiente ab sit id obcaecati architecto sequi placeat odio? Distinctio quo ut magnam laborum dolore consequatur! Totam, rerum maiores eaque numquam tenetur consequuntur libero consectetur nulla quae minus itaque fuga ex aliquam. Assumenda provident voluptatum numquam soluta incidunt necessitatibus. Hic labore aut explicabo.</p>
-  </div>
+    <p>Lorem  laboriosam quaerat veritatis, repudiandae nesciunt laborum! Cum voluptates illum necessitatibus unde, magnam fuga, reiciendis quam quibusdam fugit, ullam nostrum sunt quidem reprehenderit distinctio id tenetur vitae! Beatae consectetur quaerat adipisci sequi, perspiciatis quia quibusdam minus iure corrupti tempore, quae iste et? Animi architecto assumenda molestiae recusandae saepe impedit possimus rem quia tempore, nulla libero vel est, quidem dolorem sequi, repellendus quasi inventore cum. Ea sequi, doloribus nisi ex, necessitatibus sit aspernatur ipsum animi recusandae impedit qui quibusdam rerum. Saepe aperiam atque optio vel omnis. Quo quae eaque, blanditiis labore perspiciatis fugit in reiciendis explicabo! Amet nulla harum voluptatem quo facilis quibusdam ullam accusantium? Non magnam dolores assumenda ipsum aspernatur eum consectetur quam dolorum iste, possimus blanditiis harum! Et, quo architecto obcaecati commodi, quia quod sit, beatae quis aspernatur quaerat earum. Autem amet similique tempora, beatae explicabo magni aliquid corrupti, quaerat sapiente ab sit id obcaecati architecto sequi placeat odio? Distinctio quo ut magnam laborum dolore consequatur! Totam, rerum maiores eaque numquam tenetur consequuntur libero consectetur nulla quae minus itaque fuga ex aliquam. Assumenda provident voluptatum numquam soluta incidunt necessitatibus. Hic labore aut explicabo.</p>
 
-  <div class="button-container">
-    <%= link_to "See Our Guide To Investment", root_path , class: "button-white-horizontal"%>
-    <%= link_to "See Our Guide To Self-Publication", root_path , class: "button-grey" %>
-  </div>
+    <div class="button-container pb-5">
+      <%= link_to "See Our Guide To Investment", learn_investment_path , class: "button-white-horizontal"%>
+      <%= link_to "See Our Guide To Self-Publication", self_publication_path , class: "button-grey" %>
+    </div>
+  </section>
 
   <div class="highlights">
 
     <h2>Highlights</h2>
+
+    <div class="swiper">
+  <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <div class="swiper-slide"><div class="my-card"><h1>Slide 1</h1></div></div>
+      <div class="swiper-slide"><div class="my-card"><h1>Slide 2</h1></div></div>
+      <div class="swiper-slide"><div class="my-card"><h1>Slide 3</h1></div></div>
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+
+    <!-- If we need scrollbar -->
+    <div class="swiper-scrollbar"></div>
+  </div>
+
   </div>
 </div>
