@@ -78,9 +78,9 @@ tags = ["Fantasy", "Romance", "Mystery", "Horror", "Thriller", "Paranormal", "Hi
     title: Faker::Book.title,
     psuedoname: Faker::Name.name_with_middle,
     description: Faker::Lorem.sentence(word_count: 500, supplemental: true),
+    tag_list: tags.sample(3),
     initial_share_value: 1.3,
     total_amount: 4000,
-
     example: Faker::Lorem.sentence(word_count: 1000, supplemental: true)
   )
   book.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
