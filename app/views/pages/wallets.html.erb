@@ -1,0 +1,9 @@
+<div style="height: 100vh; padding-top: 200px;">
+  <% @wallets.each do |wallet| %>
+    <div class=""><%= wallet.cash_value %></div>
+    <%= form_with url: orders_path do %>
+  <%= hidden_field_tag 'cash_wallet_id', wallet.id %>
+  <%= submit_tag 'Purchase', class: 'btn btn-primary' %>
+<% end %>
+  <% end %>
+</div>

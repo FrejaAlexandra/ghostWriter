@@ -16,4 +16,8 @@ class PagesController < ApplicationController
       render "user_balance", status: :unprocessable_entity
     end
   end
+
+  def wallets
+    @wallets = CashWallet.all
+  end
 end

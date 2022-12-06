@@ -28,8 +28,11 @@
 
 
       <div class="d-flex justify-content-between align-items-center">
+        <div>
+          <p>Share value </p>
+          <p>€ <span data-select-amount-target="text"></span></p>
+        </div>
             <%= simple_form_for [@book, @share] do |f| %>
-
         <%= f.input :share_amount, input_html: { value: 0,  "data-action": "change->select-amount#calculateValue" }, label: "Select amount of shares" %>
         <input type="hidden" id="selected-value" name="selected-value" value="0" data-select-amount-target="value">
         <%= f.submit value: "SELL", class: "button-red", name: 'sell' %>
@@ -37,8 +40,6 @@
         <% end %>
 
 
-        <p class="d-none"></p>
-        <p data-select-amount-target="text"></p>
 
         <img class="stock-image" src="https://img.freepik.com/premium-vector/forex-trading-stock-market-candlestick-chart-investment-vector-illustration_618588-249.jpg?w=1380" alt="stock-image">
       </div>

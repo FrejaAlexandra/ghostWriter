@@ -21,6 +21,8 @@ User.create!(
   balance: 6500
 )
 
+
+
 puts "Destroying books..."
 Book.destroy_all
 puts "Creating books..."
