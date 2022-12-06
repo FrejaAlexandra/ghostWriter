@@ -9,14 +9,16 @@ User.create!(
   first_name: "Remco",
   last_name: "Jonk",
   email: "remcojonk@hotmail.com",
-  password: "123456"
+  password: "123456",
+  balance: 5000
 )
 
 User.create!(
   first_name: "Freya",
   last_name: "Heaton",
   email: "freyaheaton94@gmail.com",
-  password: "TAMPON"
+  password: "TAMPON",
+  balance: 6500
 )
 
 puts "Destroying books..."
@@ -79,8 +81,9 @@ tags = ["Fantasy", "Romance", "Mystery", "Horror", "Thriller", "Paranormal", "Hi
     psuedoname: Faker::Name.name_with_middle,
     description: Faker::Lorem.sentence(word_count: 500, supplemental: true),
     initial_share_value: 1.3,
+    current_share_value: 1.3,
     total_amount: 4000,
-
+    tag_list: tags.sample(3),
     example: Faker::Lorem.sentence(word_count: 1000, supplemental: true)
   )
   book.photo.attach(io: file, filename: "nes.png", content_type: "image/png")

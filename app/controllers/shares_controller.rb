@@ -9,7 +9,7 @@ class SharesController < ApplicationController
     @share.share_value = @book.current_share_value
     @share.user = current_user
     @share.book = @book
-
+   
     if params[:buy]
       @book.current_share_value = (1 + @share.share_amount/100) * (@book.current_share_value * rand(1.01...1.05))
     elsif params[:sell]

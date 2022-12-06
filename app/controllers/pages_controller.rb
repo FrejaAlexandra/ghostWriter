@@ -2,14 +2,9 @@ class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:home]
 
   def home
-    
   end
 
   def user_balance
-    # balance = params[:balance]
-    # current_user.balance += balance
-    # raise
-    # current_user.save
   end
 
   def add_user_balance
