@@ -27,7 +27,6 @@ class BooksController < ApplicationController
     @share_amount = @my_shares ? @my_shares.map { |share| share.share_amount }.sum() || 0 : 0
     total_shares_distr = Share.where(book_id: @book.id).map { |share| share.share_amount }.sum() || 0
     @total_shares_remain = @book.total_amount - total_shares_distr
-    # @share_value = @book.value.to_f / total_shares_remain
   end
 
   def new
