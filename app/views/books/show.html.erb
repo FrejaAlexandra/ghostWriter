@@ -14,7 +14,9 @@
           <div class="value-list">
             <div class="value-list-item">
               <h4>Price</h4>
+
               <p >€ <span data-select-amount-target="price"> <%= @book.current_share_value.round(2) %></span></p>
+
             </div>
             <div class="value-list-item">
               <h4>Shares own:</h4>
@@ -38,9 +40,6 @@
         <%= f.submit value: "SELL", class: "button-red", name: 'sell' %>
         <%= f.submit value: "BUY", class: "button-green", name: 'buy' %>
         <% end %>
-
-
-
         <img class="stock-image" src="https://img.freepik.com/premium-vector/forex-trading-stock-market-candlestick-chart-investment-vector-illustration_618588-249.jpg?w=1380" alt="stock-image">
       </div>
     </div>

@@ -1,0 +1,146 @@
+.flip-card {
+  margin: 0 auto;
+  margin-bottom: 4rem;
+  background-color: transparent;
+  // width: 32rem;
+  height: 18rem;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+  z-index:-1;
+  -webkit-box-shadow:0 0 20px $greyscale-5;
+  -moz-box-shadow:0 0 20px $greyscale-5;
+  box-shadow:0 0 20px $greyscale-5;
+  top:0;
+  bottom:0;
+  left:10px;
+  right:10px;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-size: cover;
+  background-position: center;
+  h2 {
+    font-family: $infographics-font;
+    align-items: center;
+  }
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: $white;
+  transform: rotateY(180deg);
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  .trends {
+    color: $greyscale-4;
+  }
+  .objection {
+    color: #9d9785;
+  }
+}
+
+.determine-risk {
+  color: #78b230;
+  font-family: $dashboard-font;
+  position: relative;
+  h2 {
+    position: absolute;
+    top: 2rem;
+    left: 10rem;
+  }
+}
+
+.buy-low {
+  color: #0f9fd7;
+  font-family: $dashboard-font;
+  position: relative;
+  h2 {
+    position: absolute;
+    top: 4rem;
+    right: 10rem;
+  }
+}
+
+.objection {
+  color: #ce3704;
+  font-family: $dashboard-font;
+  position: relative;
+  h2 {
+    position: absolute;
+    top: 1rem;
+    left: 10rem;
+  }
+}
+
+.long-term {
+  color: #deb701;
+  font-family: $dashboard-font;
+  position: relative;
+  h2 {
+    position: absolute;
+    top: 4rem;
+    left: 10rem;
+  }
+}
+
+.trends {
+  color: $white;
+  font-family: $dashboard-font;
+  position: relative;
+  h2 {
+    position: absolute;
+    top: 3rem;
+    left: 10rem;
+  }
+}
+
+.diversify {
+  font-family: $dashboard-font;
+  color: #7db1de;
+  position: relative;
+  h2 {
+    position: absolute;
+    top: 0.5rem;
+    left: 3rem;
+  }
+}
+
+.youtube {
+  margin: 0 auto;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+  z-index:-1;
+  -webkit-box-shadow:0 0 20px $greyscale-5;
+  -moz-box-shadow:0 0 20px $greyscale-5;
+  box-shadow:0 0 20px $greyscale-5;
+  top:0;
+  bottom:0;
+  left:10px;
+  right:10px;
+}
