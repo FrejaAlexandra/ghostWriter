@@ -145,7 +145,7 @@ book_cover = [
 
   {
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQd9_COEHkxl9-hjLjB2OPJlVEpOk7x3S8VZA&usqp=CAU",
-    title: "One Flew Over the Cuckoo's Nest",
+    title: "One Flew Over The Cuckoo's Nest",
     author: "Ken Kesey",
     description: "One Flew Over the Cuckoo's Nest is a novel by Ken Kesey published in 1962. Set in an Oregon psychiatric hospital, the narrative serves as a study of institutional processes and the human mind, including a critique of psychiatry and a tribute to individualistic principles.",
   },
@@ -166,7 +166,7 @@ book_cover = [
 
   {
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_G9vtzNAJagX3GXQi_fR2ZtZtlL2-yC9DoA&usqp=CAU",
-    title: "The color purple",
+    title: "The Color Purple",
     author: "Alice Walker",
     description: "The Color Purple documents the traumas and gradual triumph of Celie, an African American teenager raised in rural isolation in Georgia, as she comes to resist the paralyzing self-concept forced on her by others. Celie narrates her life through painfully honest letters to God.",
   },
@@ -180,7 +180,7 @@ book_cover = [
 
   {
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTelPDqosKii0o4nKvjQuG4cVSVVBAf63ENTQ&usqp=CAU",
-    title: "Rita Hayworth and Shawshank Redemption",
+    title: "Shawshank Redemption",
     author: "Stephen King",
     description: "Andy Dufresne, a banker, was convicted of killing his wife and her lover and sent to Shawshank Prison. He maintains his innocence over the decades he spends at Shawshank during which time he forms a friendship with Red, a fellow inmate.",
   },
@@ -194,28 +194,28 @@ book_cover = [
 
   {
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRc736QQ2h1lj-rI9kMMppADP6U1LrJHdflnQ&usqp=CAU",
-    title: "I Know Why the Caged Bird Sings",
+    title: "I Know Why The Caged Bird Sings",
     author: "Maya Angelou",
     description: "Sent by their mother to live with their devout, self-sufficient grandmother in a small Southern town, Maya and her brother, Bailey, endure the ache of abandonment and the prejudice of the local “powhitetrash.” At eight years old and back at her mother’s side in St. Louis, Maya is attacked by a man many times her age—and has to live with the consequences for a lifetime. Years later, in San Francisco, Maya learns that love for herself, the kindness of others, her own strong spirit, and the ideas of great authors (“I met and fell in love with William Shakespeare”) will allow her to be free instead of imprisoned.",
   },
 
   {
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCrptowqiSzh_Lw1f4T2xZTwhUSTCCWCIf4Q&usqp=CAU",
-    title: "Foucault in Warsaw",
+    title: "Foucault In Warsaw",
     author: "Remigiusz Ryziński",
     description: "Nominated for the Nike Literary Award, Foucault in Warsaw reconstructs a vibrant, engaging picture of gay life in Poland under communism—from the joys found in secret nightclubs, to the fears of not knowing who was a secret informant.",
   },
 
   {
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlXkMvUDPgWPBGBRBH9qccJfTlRSFNgQcuRA&usqp=CAU",
-    title: "Moby-Dick: or, The Whale",
+    title: "Moby-Dick",
     author: "Herman Melville",
     description: "Moby-Dick; or, The Whale is a novel by Herman Melville, in which Ishmael narrates the monomaniacal quest of Ahab, captain of the whaler Pequod, for revenge on the albino sperm whale Moby Dick, which on a previous voyage destroyed Ahab's ship and severed his leg at the knee.",
   },
 
   {
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAgVytaBFSn6WVJz4wGOPpABJ0lgVMKLoaQg&usqp=CAU",
-    title: "My Father, the Pornographer: A Memoir",
+    title: "My Father, The Pornographer",
     author: "Chris Offutt",
     description: "In “one of the most sensitive, nuanced examinations of father and son relationships” (The Boston Globe), award-winning writer Chris Offutt struggles to understand his recently deceased father, based on his reading of the 400-plus novels his father—a well-known writer of pornography in the 1970s and 80s—left him in his will.",
   },
@@ -236,7 +236,7 @@ book_cover = [
 
   {
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiG0BcFIrGXXT58FNtjLiBcRtUQYR1HgKWdA&usqp=CAU",
-    title: "On the road",
+    title: "On The Road",
     author: "Jack Kerouac",
     description: "On the Road is a 1957 novel by American writer Jack Kerouac, based on the travels of Kerouac and his friends across the United States. It is considered a defining work of the postwar Beat and Counterculture generations, with its protagonists living life against a backdrop of jazz, poetry, and drug use.",
   },
@@ -250,7 +250,7 @@ book_cover = [
 
   {
     img: "https://s26162.pcdn.co/wp-content/uploads/2019/05/81gwhSBg7L-768x1152.jpg",
-    title: "On earth we're briefly gorgeous",
+    title: "On Earth We're Briefly gorgeous",
     author: "Ocean Vuong",
     description: "'On Earth We're Briefly Gorgeous,' By Ocean Vuong Ocean Vuong's debut novel is a painful but extraordinary coming-of-age story, about a young Vietnamese American writer whose fractured family was torn by their experiences during the Vietnam War.",
   },
@@ -272,7 +272,7 @@ book_cover = [
 
   {
     img: "https://www.billboard.com/wp-content/uploads/2022/08/Snoop-Dogg-Cookbook-Embed-1240.jpeg",
-    title: "From crook to cook: platinum recipes from tha boss Dogg's kitchen",
+    title: "From Crook To Cook",
     author: "Snoop Dogg",
     description: "The first cookbook and recipe book from Tha Dogg, From Crook to Cook: Platinum Recipes from Tha Boss Dogg's Kitchen. You've seen Snoop Dogg work his culinary magic on VH1's Emmy-nominated Martha and Snoop's Potluck Dinner Party, and now Tha Dogg's up in your kitchen ... with his first cookbook. Recipe book that delivers 50 recipes straight from Snoop's own collection: Snoop's cookbook features OG soul food cookbook staples.",
   },
@@ -286,14 +286,14 @@ book_cover = [
 
   {
     img: "https://m.media-amazon.com/images/I/51T8OXMiB5L._SY344_BO1,204,203,200_QL70_ML2_.jpg",
-    title: "Ikigai: The Japanese secret to a long and happy life",
+    title: "The Japanese Secret To A Long And Happy Life",
     author: "Hector Garcia, Francesc Miralles",
     description: "Ikigai gently unlocks simple secrets we can all use to live long, meaningful, happy lives. Science-based studies weave beautifully into honest, straight-talking conversation you won't be able to put down. Warm, patient, and kind, this book pulls you gently along your own journey rather than pushing you from behind.",
   },
 
   {
     img: "https://m.media-amazon.com/images/I/51VvX-IKp+L._SX258_BO1,204,203,200_.jpg",
-    title: "Cooking to Save your Life",
+    title: "Cooking To Save Your Life",
     author: "Cheyenne Olivier",
     description: "In this playful, erudite and sensationally delicious cookbook, Banerjee takes us through the recipes he has delighted his friends, colleagues and students with - from charred avocado to Andhra pork ribs, deconstructed salade niçoise to a trifle made in under 20 minutes.",
   },
@@ -307,14 +307,14 @@ book_cover = [
 
   {
     img: "https://m.media-amazon.com/images/I/41LwAb57YJL._SY344_BO1,204,203,200_QL70_ML2_.jpg",
-    title: "Being mortal: illness, medicine and what matters in the end",
+    title: "Being Mortal",
     author: "Atul Gawande",
     description: "Being Mortal: Medicine and What Matters in the End is a 2014 non-fiction book by American surgeon Atul Gawande. The book addresses end-of-life care, hospice care, and also contains Gawande's reflections and personal stories. He suggests that medical care should focus on well-being rather than survival.",
   },
 
   {
     img: "https://m.media-amazon.com/images/I/41dZrbZCqTL._SY344_BO1,204,203,200_QL70_ML2_.jpg",
-    title: "Polysecure: Attachment, Trauma and Consensual Nonmonogamy",
+    title: "Polysecure",
     author: "Jessica Fern",
     description: "Attachment theory has entered the mainstream, but most discussions focus on how we can cultivate secure monogamous relationships. What if, like many people, you're striving for secure, happy attachments with more than one partner? Polyamorous psychotherapist Jessica Fern breaks new ground by extending attachment theory into the realm of consensual nonmonogamy. Using her nested model of attachment and trauma, she expands our understanding of how emotional experiences can influence our relationships. Then, she sets out six specific strategies to help you move toward secure attachments in your multiple relationships. Polysecure is both a trailblazing theoretical treatise and a practical guide.",
   },
@@ -342,14 +342,14 @@ book_cover = [
 
   {
     img: "https://m.media-amazon.com/images/I/41mQIVrnIaL._SY344_BO1,204,203,200_QL70_ML2_.jpg",
-    title: "Bauhaus: (World of Art)",
+    title: "Bauhaus",
     author: "Frank Whitford",
     description: "The author describes the historical context of the Bauhaus school, the development of the Bauhaus style, key figures at the school and within the movement, and the influence of Bauhaus art and design on future artistic styles.",
   },
 
   {
     img: "https://pm1.narvii.com/6178/0d884ae5d41510cc073bea3f182c8108a4da8e2f_hq.jpg",
-    title: "Attack on Titan",
+    title: "Attack On Titan",
     author: "Hajime Isayama",
     description: "A Japanese manga series written and illustrated by Hajime Isayama, Attack on Titan is set in a world where humanity lives inside cities surrounded by enormous walls that protect them from gigantic man-eating humanoids called Titans.",
   },
@@ -363,7 +363,7 @@ book_cover = [
 
   {
     img: "https://m.media-amazon.com/images/I/41mT5UyhZ4L._SY344_BO1,204,203,200_QL70_ML2_.jpg",
-    title: "The body keeps the score",
+    title: "The Body Keeps The Score",
     author: "Bessel A. van der Kolk",
     description: "Renowned trauma expert Bessel van der Kolk has spent over three decades working with survivors. In The Body Keeps the Score, he transforms our understanding of traumatic stress, revealing how it literally rearranges the brain’s wiring—specifically areas dedicated to pleasure, engagement, control, and trust. He shows how these areas can be reactivated through innovative treatments including neurofeedback, mindfulness techniques, play, yoga, and other therapies. Based on Dr. van der Kolk's own research and that of other leading specialists, The Body Keeps the Score offers proven alternatives to drugs and talk therapy—and a way to reclaim lives.",
   },
