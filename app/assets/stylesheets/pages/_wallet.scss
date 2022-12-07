@@ -1,0 +1,20 @@
+.payment-container{
+  gap: 2rem;
+  justify-content: center;
+  background-color: #43434330;
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
+
+.payment-card{
+  background-color: $white;
+  border-radius: 0.5rem;
+  padding-top: 1rem;
+  width: 15rem;
+  height: 7.5rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}

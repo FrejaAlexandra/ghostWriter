@@ -15,7 +15,7 @@
     </div>
 
     <div class="book-info">
-      <h5><%= book.title %></h5>
+      <h5><%= book.title.first(40) %></h5>
       <h6><i><%= book.psuedoname %></i></h6>
       <% if book.description.length > 120 %>
         <p><%= book.description.first(120) %>...</p>
@@ -30,7 +30,7 @@
       <% book.tag_list.each do |tag| %>
           <p><%= tag %></p>
       <% end %>
-      <div class="button-white-horizontal small mb-5 mx-auto"><h4>€ 3,53</h4></div>
+      <div class="button-white-horizontal small my-3 mx-auto"><h4>€ <%= book.current_share_value.round(2) %></h4></div>
     </div>
   </div>
 </div>

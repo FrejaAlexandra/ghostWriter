@@ -33,6 +33,16 @@ CashWallet.destroy_all
 puts "Creating wallet..."
 
 CashWallet.create!(
+  cash_value: "10",
+  price_cents: 1000
+)
+
+CashWallet.create!(
+  cash_value: "25",
+  price_cents: 250
+)
+
+CashWallet.create!(
   cash_value: "50",
   price_cents: 5000
 )
@@ -65,6 +75,21 @@ CashWallet.create!(
 CashWallet.create!(
   cash_value: "1000",
   price_cents: 100000
+)
+
+CashWallet.create!(
+  cash_value: "1500",
+  price_cents: 150000
+)
+
+CashWallet.create!(
+  cash_value: "2000",
+  price_cents: 200000
+)
+
+CashWallet.create!(
+  cash_value: "2500",
+  price_cents: 250000
 )
 
 puts "Destroying books..."
