@@ -1,22 +1,22 @@
 <div class="container">
   <div class="portfolio">
     <h1>Portfolio</h1>
-    <% sum = 0 %>
-    <% @shares.each do |share| %>
-          <% total_value = (share.share_value.to_f * share.share_amount.to_f) %>
-          <% sum += total_value %>
-    <% end %>
+    <%# <% sum = 0 %> %>
+    <%# <% @shares.each do |share| %> %>
+          <%# <% total_value = (share.share_value.to_f * share.share_amount.to_f) %> %>
+          <%# <% sum += total_value %> %>
+    <%# <% end %> %>
 
-    <% total_balance = sum + current_user.balance %>
+    <%# <% total_balance = sum + current_user.balance %> %>
 
     <div class="portfolio-container">
       <div class="secition-left col-4">
         <p><strong>Wallet</strong></p>
-        <p>€<%= sum %></p>
+        <%# <p>€<%= sum %></p> %>
         <p><strong>Cash</strong></p>
         <p>€ <%= current_user.balance %></p>
         <p><strong>Total Balance</strong></p>
-        <p>€ <%= total_balance %></p>
+        <%# <p>€ <%= total_balance %></p> %>
       </div>
         <div class="section-middle col-4 text-center">
           <img src="https://www.fireblog.nl/wp-content/uploads/2019/12/SP10yr-1.jpg" alt="" style="width: 100%">
