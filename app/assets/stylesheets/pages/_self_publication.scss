@@ -1,0 +1,38 @@
+.swiper {
+  margin: 0 auto;
+  width: 60rem;
+  height: 25.6875rem;
+  margin-top: 10rem;
+}
+
+.card {
+  margin: 0 auto;
+  width: 60rem;
+  height: 25.6875rem;
+  position: relative;
+  color: $white;
+  padding-left: 15rem;
+  padding-top: 8rem;
+}
+
+.number {
+  font-size: 25rem;
+  font-family: $numbers-font;
+  position: absolute;
+  left: 3rem;
+  bottom: -5rem;
+}
+
+.card-1 {
+  background-color: #a5c76a;
+  color:  #d3efa5;
+}
+
+.card-2 {
+  background-color: #c76a6a;
+  color:  #efc9a5;
+}
+
+.swiper-button-next {
+  color: $greyscale-4;
+}
