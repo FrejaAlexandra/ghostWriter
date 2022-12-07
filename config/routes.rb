@@ -4,9 +4,14 @@ Rails.application.routes.draw do
   resources :books do
     resources :shares, only: [:index, :create, :update]
   end
+
   resources :orders, only: [:show, :create] do
     resources :payments, only: :new
   end
+  get 'our_mission', to: 'pages#our_mission'
+  get 'self_publication', to: 'pages#self_publication'
+  get 'learn_investment', to: 'pages#learn_investment'
+
   resources :shares, only: [:index, :delete]
   get '/tagged', to: "books#tagged", as: :tagged
   get 'user_balance', to: 'pages#user_balance'

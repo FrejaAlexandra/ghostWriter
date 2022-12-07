@@ -3,10 +3,7 @@
   flex-direction: column;
   justify-content: space-between;
   position: relative;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  height: 40vh;
+  height: 45vh;
   border-radius: 10px;
   border: solid;
   border-color: $greyscale-2;
@@ -14,6 +11,9 @@
   background-color: $white;
   box-shadow: 2px 2px $greyscale-2;
   padding: 10px;
+  .card-title {
+
+  }
 
   .growth {
     position: absolute;
@@ -33,11 +33,14 @@
   }
 
   .book-info{
-    margin: 45px 15px 0 15px;
+    margin: 8px;
+    margin-top: 45px;
     p {
       overflow: hidden;
       font-size: 1.0rem;
     }
+    width: 50%;
+    height: 26vh;
   }
 
   .info-bar{
@@ -52,9 +55,17 @@
   }
 
   .book-cover {
-    margin-top: 20px;
-    margin-left: 10px;
+    // margin-top: 20px;
+    // margin-left: 10px;
     border-radius: 5px;
-    height: 230px;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .image-container{
+    margin: 8px;
+    height: 30vh;
+    width: 50%;
   }
 }

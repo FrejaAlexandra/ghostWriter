@@ -74,7 +74,7 @@ book_cover = ["https://img.theculturetrip.com/450x/smart/images/56-3972722-51zvc
               "https://www.rickhansen.com/sites/default/files/2020-01/beautyisaverb-cover-hi-rez.jpg"
             ]
 
-tags = ["Fantasy", "Romance", "Mystery", "Horror", "Thriller", "Paranormal", "Historical Fiction", "Sci-Fi", "Dystopian", "Memoir", "Art", "Self Help", "Motivational", "Health", "History", "Travel Guide", "Cookbook", "Poetry", "Erotic", "Female Author", "Trans Author", "Queer Author", "Non-Binary Author", "POC Author", "Black Author", "Asian Author", "LatinX Author", "Indegenous Author", "Agender Author", "Polysexual Author", "Fat Author" "Disabled Author", "Neurodivergent Author", "Literary Prize", "Critically Acclaimed", "Dark", "Cerebral", "Inspiring", "Slow-Burn", "Psychological", "Quirky", "Coming Of Age", "Cultural", "Social Commentary", "Sunday Reading", "Guilty Pleasure", "Strong Female Lead", "Queer Romance", "Manga/Anime", "Graphic Novel", "Children's Book", "Design"]
+tags = ["Fantasy", "Romance", "Mystery", "Horror", "Thriller", "Paranormal", "Historical Fiction", "Sci-Fi", "Dystopian", "Memoir", "Art", "Self Help", "Motivational", "Health", "History", "Travel Guide", "Cookbook", "Poetry", "Erotic", "Female Author", "Trans Author", "Queer Author", "Non-Binary Author", "POC Author", "Black Author", "Asian Author", "LatinX Author", "Indegenous Author", "Agender Author", "Polysexual Author", "Fat Author", "Disabled Author", "Neurodivergent Author", "Literary Prize", "Critically Acclaimed", "Dark", "Cerebral", "Inspiring", "Slow-Burn", "Psychological", "Quirky", "Coming Of Age", "Cultural", "Social Commentary", "Sunday Reading", "Guilty Pleasure", "Strong Female Lead", "Queer Romance", "Manga/Anime", "Graphic Novel", "Children's Book", "Design"]
 
 43.times do |i|
   file = URI.open(book_cover[i])
@@ -84,10 +84,12 @@ tags = ["Fantasy", "Romance", "Mystery", "Horror", "Thriller", "Paranormal", "Hi
     title: Faker::Book.title,
     psuedoname: Faker::Name.name_with_middle,
     description: Faker::Lorem.sentence(word_count: 500, supplemental: true),
+    tag_list: tags.sample(3),
     initial_share_value: 1.3,
     current_share_value: 1.3,
     total_amount: 4000,
     tag_list: tags.sample(3),
+
     example: Faker::Lorem.sentence(word_count: 1000, supplemental: true)
   )
   book.photo.attach(io: file, filename: "nes.png", content_type: "image/png")

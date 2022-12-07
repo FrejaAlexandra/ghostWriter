@@ -2,16 +2,17 @@
 <div class="navbar">
     <% if user_signed_in? %>
       <div class="home">
-        <%= link_to "Ghostwriter", root_path , class: "nav-link" %>
+        <%= link_to root_path, class: "nav-link" do %>
+          <%= image_tag "https://res.cloudinary.com/dsl9ixl0t/image/upload/v1670330826/GhostWT_logo_new_uks1qy.png", id: "logo" %>
+        <% end %>
       </div>
 
         <div class="learn-about">
-            <%= link_to "Our Mission", "#", class: "nav-link" %>
-            <%= link_to "More On Self Publication", "#", class: "nav-link" %>
-            <%= link_to "More On Investment", "#", class: "nav-link" %>
+            <%= link_to "Our Mission", "/#our-mission", class: "nav-link" %>
+            <%= link_to "More On Self Publication", self_publication_path, class: "nav-link" %>
+            <%= link_to "More On Investment", learn_investment_path, class: "nav-link" %>
         </div>
 
- <%# book_path(@book, section: "analysis") %>
 
         <div class="dropdown">
             <%= image_tag "https://www.cabq.gov/artsculture/biopark/news/10-cool-facts-about-penguins/@@images/1a36b305-412d-405e-a38b-0947ce6709ba.jpeg", class: "avatar-bordered dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>

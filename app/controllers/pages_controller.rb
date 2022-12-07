@@ -1,7 +1,5 @@
 class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:home]
-
-  def home
   end
 
   def user_balance
@@ -17,7 +15,16 @@ class PagesController < ApplicationController
     end
   end
 
+
   def wallets
     @wallets = CashWallet.all
+
+  def our_mission
+  end
+
+  def self_publication
+  end
+
+  def learn_investment
   end
 end
