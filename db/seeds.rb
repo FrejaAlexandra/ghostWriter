@@ -230,13 +230,13 @@ book_cover = [
     description: "'On Earth We're Briefly Gorgeous,' By Ocean Vuong Ocean Vuong's debut novel is a painful but extraordinary coming-of-age story, about a young Vietnamese American writer whose fractured family was torn by their experiences during the Vietnam War.",
   },
 
-  {
-    img: "https://cdn-1.debijenkorf.nl/web_detail_2x/assouline-capri-dolce-vita/?reference=057/720/0577209001000000_pro_flt_frt_01_1108_1528_7231688.jpg",
-    title: "Capri Dolce Vita",
-    author: "Cesare Cunnacia",
-    description: "Capri, a resort island dating back to the height of the Roman Empire, has long been an extraordinary destination full of ancient charm. Cherished by everyone from physician Axel Munthe, who recommended its clean air to his patients as a cure for bronchitis ; to film director Jean-Luc Godard as the setting for his 1963 film Contempt ; to literary icons, celebrities, poets, and the jet set, Capri boasts a rich Mediterranean spirit and style that encompasses a wealth of beauty, from gardens to villas to caves to the people walking in the lively Piazzetta, where cars are prohibited and the island's playful attitude runs rampant. Capri Dolce Vita is a look at this fabled corner of the world through the ages and a celebration of paradise on earth.",
-    author_description: "Cesare Cunaccia is a writer, lecturer, curator, and journalist. He was editor at large for Vogue Italia and L'Uomo Vogue and the antiques consultant for Architectural Digest Italy."
-  },
+  # {
+  #   img: "https://cdn-1.debijenkorf.nl/web_detail_2x/assouline-capri-dolce-vita/?reference=057/720/0577209001000000_pro_flt_frt_01_1108_1528_7231688.jpg",
+  #   title: "Capri Dolce Vita",
+  #   author: "Cesare Cunnacia",
+  #   description: "Capri, a resort island dating back to the height of the Roman Empire, has long been an extraordinary destination full of ancient charm. Cherished by everyone from physician Axel Munthe, who recommended its clean air to his patients as a cure for bronchitis ; to film director Jean-Luc Godard as the setting for his 1963 film Contempt ; to literary icons, celebrities, poets, and the jet set, Capri boasts a rich Mediterranean spirit and style that encompasses a wealth of beauty, from gardens to villas to caves to the people walking in the lively Piazzetta, where cars are prohibited and the island's playful attitude runs rampant. Capri Dolce Vita is a look at this fabled corner of the world through the ages and a celebration of paradise on earth.",
+  #   author_description: "Cesare Cunaccia is a writer, lecturer, curator, and journalist. He was editor at large for Vogue Italia and L'Uomo Vogue and the antiques consultant for Architectural Digest Italy."
+  # },
 
   {
     img: "https://media.s-bol.com/XLLDYxXX8MKW/550x711.jpg",
