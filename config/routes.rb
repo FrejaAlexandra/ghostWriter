@@ -13,5 +13,5 @@ Rails.application.routes.draw do
   post 'user_balance', to: 'pages#add_user_balance'
 
   get 'wallets', to: 'pages#wallets'
-  # mount StripeEvent::Engine, at: '/stripe-webhooks'
+  mount StripeEvent::Engine, at: '/stripe-webhooks'
 end

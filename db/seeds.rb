@@ -21,7 +21,9 @@ User.create!(
   balance: 6500
 )
 
-
+# CashWallet.create!(
+#   cash_value: "50"
+# )
 
 puts "Destroying books..."
 Book.destroy_all
