@@ -8,6 +8,7 @@
     "bootstrap": "^5.2.3",
     "swiper": "^8.4.5",
     "tom-select": "^2.2.2",
+    "typed.js": "^2.0.12",
     "webpack": "^5.75.0",
     "webpack-cli": "^5.0.0"
   },
