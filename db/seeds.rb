@@ -362,6 +362,7 @@ book_cover.each do |i|
     author_description: i[:author_description],
     user_id: User.last.id,
     psuedoname: i[:author],
+    tag_list: tags.sample(3),
     initial_share_value: 1.3,
     current_share_value: 1.3,
     total_amount: 4000,
