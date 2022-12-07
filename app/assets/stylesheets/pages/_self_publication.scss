@@ -2,7 +2,7 @@
   margin: 0 auto;
   width: 60rem;
   height: 25.6875rem;
-  margin-top: 10rem;
+  margin-top: 5rem;
   -webkit-backface-visibility: hidden; /* Safari */
   backface-visibility: hidden;
   z-index:-1;
@@ -25,6 +25,7 @@
   padding-top: 8rem;
   background-size: cover;
   background-repeat: no-repeat;
+  color: $white !important;
 }
 
 .number {
