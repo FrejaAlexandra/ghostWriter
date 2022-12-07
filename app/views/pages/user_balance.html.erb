@@ -3,8 +3,14 @@
 
       <%= form_with url: user_balance_path, method: :post do |form| %>
       <%= form.label :balance, "Fill in your deposit amount"%>
+
       <%= form.number_field :balance, in: 50..5000, step: 1 %>
       <%= form.submit "Pay", class: "style=button-grey;" %>
       <% end %>
+
+      <%= form_with url: orders_path do %>
+  <%= hidden_field_tag 'cash_wallet', @cash_wallet.id %>
+  <%= submit_tag 'Purchase', class: 'btn btn-primary' %>
+<% end %>
 
 </div>

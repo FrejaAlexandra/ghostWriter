@@ -47,10 +47,10 @@
             <tr>
             <th><%= share.book.title %></th>
             <th><%= share.share_amount %></th>
-            <th>€ <%= share.share_value.to_f %></th>
+            <th>€ <%= share.share_value.to_f.round(2) %></th>
             <th>3,2%</th>
             <% total_value = (share.share_value.to_f * share.share_amount.to_f) %>
-            <th>€ <%= total_value %></th>
+            <th>€ <%= total_value.round(2) %></th>
           </tr>
         <% end %>
       </table>

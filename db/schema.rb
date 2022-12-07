@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_12_05_110925) do
+ActiveRecord::Schema[7.0].define(version: 2022_12_06_134159) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -56,6 +56,26 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_05_110925) do
     t.float "current_share_value"
     t.float "initial_share_value"
     t.index ["user_id"], name: "index_books_on_user_id"
+  end
+
+  create_table "cash_wallets", force: :cascade do |t|
+    t.string "cash_value"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "price_cents", default: 0, null: false
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.string "state"
+    t.string "checkout_session_id"
+    t.bigint "user_id", null: false
+    t.bigint "cash_wallet_id", null: false
+    t.integer "amount_cents", default: 0, null: false
+    t.string "amount_currency", default: "EUR", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["cash_wallet_id"], name: "index_orders_on_cash_wallet_id"
+    t.index ["user_id"], name: "index_orders_on_user_id"
   end
 
   create_table "shares", force: :cascade do |t|
@@ -121,6 +141,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_05_110925) do
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "books", "users"
+  add_foreign_key "orders", "cash_wallets"
+  add_foreign_key "orders", "users"
   add_foreign_key "shares", "books"
   add_foreign_key "shares", "users"
   add_foreign_key "taggings", "tags"

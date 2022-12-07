@@ -9,7 +9,8 @@ User.create!(
   first_name: "Remco",
   last_name: "Jonk",
   email: "remcojonk@hotmail.com",
-  password: "123456"
+  password: "123456",
+  balance: 5000
 )
 
 User.create!(
@@ -22,8 +23,48 @@ User.create!(
 User.create!(
   first_name: "Freya",
   last_name: "Heaton",
+
   email: "freyaheaton94@gmail.com",
-  password: "TAMPON"
+  password: "TAMPON",
+  balance: 6500
+)
+puts "Destroying wallets."
+CashWallet.destroy_all
+puts "Creating wallet..."
+
+CashWallet.create!(
+  cash_value: "50",
+  price_cents: 5000
+)
+
+CashWallet.create!(
+  cash_value: "150",
+  price_cents: 15000
+)
+
+CashWallet.create!(
+  cash_value: "200",
+  price_cents: 20000
+)
+
+CashWallet.create!(
+  cash_value: "250",
+  price_cents: 25000
+)
+
+CashWallet.create!(
+  cash_value: "500",
+  price_cents: 50000
+)
+
+CashWallet.create!(
+  cash_value: "750",
+  price_cents: 75000
+)
+
+CashWallet.create!(
+  cash_value: "1000",
+  price_cents: 100000
 )
 
 puts "Destroying books..."
@@ -310,7 +351,7 @@ book_cover = [
   }
 ]
 
-tags = ["Fantasy", "Romance", "Mystery", "Horror", "Thriller", "Paranormal", "Historical Fiction", "Sci-Fi", "Dystopian", "Memoir", "Art", "Self Help", "Motivational", "Health", "History", "Travel Guide", "Cookbook", "Poetry", "Erotic", "Female Author", "Trans Author", "Queer Author", "Non-Binary Author", "POC Author", "Black Author", "Asian Author", "LatinX Author", "Indegenous Author", "Agender Author", "Polysexual Author", "Fat Author" "Disabled Author", "Neurodivergent Author", "Literary Prize", "Critically Acclaimed", "Dark", "Cerebral", "Inspiring", "Slow-Burn", "Psychological", "Quirky", "Coming Of Age", "Cultural", "Social Commentary", "Sunday Reading", "Guilty Pleasure", "Strong Female Lead", "Queer Romance", "Manga/Anime", "Graphic Novel", "Children's Book", "Design"]
+tags = ["Fantasy", "Romance", "Mystery", "Horror", "Thriller", "Paranormal", "Historical Fiction", "Sci-Fi", "Dystopian", "Memoir", "Art", "Self Help", "Motivational", "Health", "History", "Travel Guide", "Cookbook", "Poetry", "Erotic", "Female Author", "Trans Author", "Queer Author", "Non-Binary Author", "POC Author", "Black Author", "Asian Author", "LatinX Author", "Indegenous Author", "Agender Author", "Polysexual Author", "Fat Author", "Disabled Author", "Neurodivergent Author", "Literary Prize", "Critically Acclaimed", "Dark", "Cerebral", "Inspiring", "Slow-Burn", "Psychological", "Quirky", "Coming Of Age", "Cultural", "Social Commentary", "Sunday Reading", "Guilty Pleasure", "Strong Female Lead", "Queer Romance", "Manga/Anime", "Graphic Novel", "Children's Book", "Design"]
 
 book_cover.each do |i|
   file = URI.open(i[:img])
@@ -324,7 +365,6 @@ book_cover.each do |i|
     initial_share_value: 1.3,
     current_share_value: 1.3,
     total_amount: 4000,
-
     example: Faker::Lorem.sentence(word_count: 1000, supplemental: true)
   )
   book.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
