@@ -1,6 +1,6 @@
 <div class="container">
+  <h1 class="title-mp">My Portfolio</h1>
   <div class="portfolio">
-    <h1>Portfolio</h1>
     <% sum = 0 %>
     <% @shares.each do |share| %>
       <% total_value = (share.share_value.to_f * share.share_amount.to_f) %>

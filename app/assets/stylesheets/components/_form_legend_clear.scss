@@ -15,7 +15,7 @@ legend ~ div.form-check:first-of-type {
 
 .custom-label, .custom-label:hover {
   color: $greyscale-4;
-
+  font-size: 1.3rem;
 }
 
 a, a:hover {
@@ -30,4 +30,12 @@ a, a:hover {
   // display: flex;
   display: grid !important;
   grid-template-columns: repeat(3, 1fr) !important;
+}
+
+.form-check {
+  font-size: 1.3rem;
+}
+
+.form-label {
+  font-size: 1.3rem;
 }

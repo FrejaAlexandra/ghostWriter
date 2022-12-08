@@ -1,9 +1,18 @@
+.title-mp {
+  font-family: $headers-font;
+  font-size: 80px;
+  color: $brown;
+}
+
 .portfolio {
   margin-top: 20px;
   background-color: rgba(255, 255, 255, 0.585);
   box-shadow: 1px 1px $greyscale-3;
   padding: 15px;
   border-radius: 15px;
+  p {
+    font-family: $dashboard-font;
+  }
 }
 
 .portfolio-container{
@@ -14,4 +23,3 @@
 .share-container{
   margin-top: 20px;
 }
-
