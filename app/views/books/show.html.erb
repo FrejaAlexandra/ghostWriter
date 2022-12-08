@@ -1,4 +1,5 @@
 <div class="container">
+
   <div class="d-flex justify-content-between">
 
     <% if @book.photo.present? %>
@@ -11,28 +12,30 @@
         <h1><%= @book.title %></h1>
         <h5><i>By <%= @book.psuedoname %></i></h5>
 
-          <div class="value-list">
-            <div class="value-list-item">
-              <h4>Price</h4>
-
-              <p >€ <span data-select-amount-target="price"> <%= @book.current_share_value.round(2) %></span></p>
-
-            </div>
-            <div class="value-list-item">
-              <h4>Shares own:</h4>
-              <p><%= @share_amount %></p>
-            </div>
-            <div class="value-list-item">
-              <h4>Shares availible:</h4>
-              <p><%= @total_shares_remain %></p>
-            </div>
-          </div>
-
+      <div class="value-list">
+        <div class="value-list-item">
+          <h4>Price</h4>
+          <p >€ <span data-select-amount-target="price"> <%= @book.current_share_value.round(2) %></span></p>
+        </div>
+        <div class="value-list-item">
+          <h4>Shares own:</h4>
+          <p><%= @share_amount %></p>
+        </div>
+        <div class="value-list-item">
+          <h4>Shares availible:</h4>
+          <p><%= @total_shares_remain %></p>
+        </div>
+      </div>
 
       <div class="purchage-section">
-        <div id="share_value">
-          <p>Share value </p>
-          <p>€ <span data-select-amount-target="text"></span></p>
+        <div id="graph">
+          <% if  @book.created_at == Date.today %>
+            <img src="https://res.cloudinary.com/dsl9ixl0t/image/upload/v1670490792/starting-chart_ujqsfp.png" alt="chart">
+          <% elsif @book.current_share_value <= 1.6 %>
+            <img src="https://res.cloudinary.com/dsl9ixl0t/image/upload/v1670490757/Losing-chart_ik5fty.png" alt="chart">
+          <% elsif @book.current_share_value > 1.6 %>
+            <img src="https://res.cloudinary.com/dsl9ixl0t/image/upload/v1670490747/chart_1_ovhu6b.png" alt="chart">
+          <% end %>
         </div>
 
         <div id="form" style="z-index: 100;">
@@ -44,53 +47,52 @@
           <% end %>
         </div>
 
-        <div id="graph">
-          <% if  @book.created_at == Date.today %>
-            <img src="https://res.cloudinary.com/dsl9ixl0t/image/upload/v1670490792/starting-chart_ujqsfp.png" alt="chart">
-          <% elsif @book.current_share_value <= 1.6 %>
-            <img src="https://res.cloudinary.com/dsl9ixl0t/image/upload/v1670490757/Losing-chart_ik5fty.png" alt="chart">
-          <% elsif @book.current_share_value > 1.6 %>
-            <img src="https://res.cloudinary.com/dsl9ixl0t/image/upload/v1670490747/chart_1_ovhu6b.png" alt="chart">
-          <% end %>
+        <div id="share_value">
+          <p>Total </p>
+            <p>€ <span data-select-amount-target="text">0</span></p>
         </div>
 
       </div>
-    </div>
-  </div>
-
-
-<div class="container">
-  <ul class="nav nav-tabs" id="myTab" role="tablist">
-  <li class="nav-item" role="presentation">
-    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true"><p>Description</p></button>
-  </li>
-  <li class="nav-item" role="presentation">
-    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false"> <p>Author</p></button>
-  </li>
-  <li class="nav-item" role="presentation">
-    <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false"><p>Financials</p></button>
-  </li>
-  <li class="nav-item" role="presentation">
-    <button class="nav-link" id="disabled-tab" data-bs-toggle="tab" data-bs-target="#disabled-tab-pane" type="button" role="tab" aria-controls="disabled-tab-pane" aria-selected="false"><p>Analysis</p></button>
-  </li>
-</ul>
-
-  <div class="tab-content" id="myTabContent">
-    <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
-      <p><%= @book.description %></p>
-    </div>
-    <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
-      <p><%= @book.author_description %></p>
-    </div>
-    <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
-      <p>Financials</p>
-    </div>
-    <div class="tab-pane fade" id="disabled-tab-pane" role="tabpanel" aria-labelledby="disabled-tab" tabindex="0">
-      <p>Analysis</p>
-    </div>
   </div>
 </div>
 
+<div class="tab-container">
+  <ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true"><p>Description</p></button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false"> <p>Author</p></button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false"><p>Financials</p></button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="disabled-tab" data-bs-toggle="tab" data-bs-target="#disabled-tab-pane" type="button" role="tab" aria-controls="disabled-tab-pane" aria-selected="false"><p>Analysis</p></button>
+    </li>
+  </ul>
+
+  <div class="tab-content" id="myTabContent">
+
+    <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+      <p><%= @book.description %></p>
+    </div>
+
+    <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+      <p><%= @book.author_description %></p>
+    </div>
+
+    <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+      <p>Financials</p>
+    </div>
+
+    <div class="tab-pane fade" id="disabled-tab-pane" role="tabpanel" aria-labelledby="disabled-tab" tabindex="0">
+      <p>Analysis</p>
+    </div>
+
+  </div>
+
   <%= link_to "Edit", edit_book_path(@book) %>
   <%= link_to "Back", books_path %>
+
 </div>

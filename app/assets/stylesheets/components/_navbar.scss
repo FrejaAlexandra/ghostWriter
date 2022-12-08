@@ -3,7 +3,6 @@
   position: fixed;
   width: 100%;
   background: #dadde96b;
-  // border-color: $greyscale-2;
   box-shadow: 1px 1px $greyscale-2;
   display: flex;
   flex-direction: row;
@@ -19,16 +18,15 @@
 
 .learn-about {
   width: 50vw;
-  // background: $white;
   color: #2B4F8D;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
 
-.home {
-  height: 50px;
-}
+// .home {
+//   height: 50px;
+// }
 
 .avatar-bordered {
   height: 50px;
