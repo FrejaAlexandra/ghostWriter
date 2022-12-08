@@ -19,7 +19,7 @@ class SharesController < ApplicationController
     end
     @book.save
     if @share.save
-      redirect_to book_path(@book), notice: "Thankyou for your support!"
+      redirect_to book_path(@book), notice: "Added To Portfolio!"
     else
       render :new, status: :unprocessable_entity
     end

@@ -297,7 +297,7 @@ book_cover = [
 
   {
     img: "https://m.media-amazon.com/images/I/51T8OXMiB5L._SY344_BO1,204,203,200_QL70_ML2_.jpg",
-    title: "The Japanese Secret To A Long And Happy Life",
+    title: "Ikigai",
     author: "Hector Garcia, Francesc Miralles",
     description: "Ikigai gently unlocks simple secrets we can all use to live long, meaningful, happy lives. Science-based studies weave beautifully into honest, straight-talking conversation you won't be able to put down. Warm, patient, and kind, this book pulls you gently along your own journey rather than pushing you from behind.",
     author_description: "Francesc Miralles is an award-winning author who has written a number of bestselling self-help and inspirational books. Born in Barcelona, he studied journalism, English literature, and German, and has worked as an editor, a translator, a ghost-writer, and a musician."
@@ -409,7 +409,6 @@ book_cover.each do |i|
     title: i[:title],
     description: i[:description],
     author_description: i[:author_description],
-    finacials: 
     user_id: User.last.id,
     psuedoname: i[:author],
     tag_list: tags.sample(3),
