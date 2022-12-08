@@ -20,13 +20,16 @@
   bottom:0;
   left:10px;
   right:10px;
+  .button-white-horizontal {
+    font-size: 1.5rem;
+  }
 
 
   .growth {
     position: absolute;
     top: 10px;
     right: 10px;
-    font-size: 18px;
+    font-size: 1.5rem;
     color: $green;
     font-family: $dashboard-font;
     display: flex;
