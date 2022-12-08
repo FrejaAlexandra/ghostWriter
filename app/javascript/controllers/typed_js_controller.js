@@ -6,7 +6,7 @@ export default class extends Controller {
     console.log("bjcwkdcw")
     new Typed(this.element, {
       strings: [" When you self-publish a book, you control what's in it. You control how long it is. And you control how it looks. Of course, if your book isn't good, you have no editor or editorial board to blame."],
-      typeSpeed: 80,
+      typeSpeed: 50,
       loop: true
     })
   }

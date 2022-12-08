@@ -5,13 +5,20 @@
   border-radius: 5px;
   padding: 10px;
   flex-direction: column;
-  //border: solid;
-  //border-color: $greyscale-2;
   color: $greyscale-5;
   background-color: $white;
   box-shadow: 2px 2px $greyscale-2;
   z-index: 1;
   font-family: $dashboard-font;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+  -webkit-box-shadow:0 0 20px $greyscale-5;
+  -moz-box-shadow:0 0 20px $greyscale-5;
+  box-shadow:0 0 20px $greyscale-5;
+  top:0;
+  bottom:0;
+  left:10px;
+  right:10px;
 }
 
 .portfolio-value {
