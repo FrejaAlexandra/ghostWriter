@@ -11,11 +11,11 @@
 }
 
 .custom-notice {
-  padding: 1rem;
+  padding: 5rem;
   background-color: $white;
-  p {
-    font-size: 8rem;
-  }
+  border: solid 1px grey;
+  font-size: 5rem;
+
 }
 
 .btn-close {
