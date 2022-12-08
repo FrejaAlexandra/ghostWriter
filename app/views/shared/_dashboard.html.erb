@@ -11,7 +11,7 @@
       <div class="grid-dashboard">
         <div class="grid-dashboard-item">
           <p>Available Cash</p>
-          <p>€51</p>
+          <p>€ <%= current_user.balance.round(2) %></p>
         </div>
         <div class="grid-dashboard-item">
           <p>Earnings</p>
@@ -19,7 +19,7 @@
         </div>
         <div class="grid-dashboard-item">
           <p>Badges</p>
-          <p>14 books</p>
+          <p><%= current_user.shares.count %> </p>
         </div>
       </div>
   </div>

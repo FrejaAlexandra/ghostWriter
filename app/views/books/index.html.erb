@@ -1,22 +1,12 @@
 <div class="container">
   <div class="all-books">
     <div class="title">
-      <h1 class="title">All<br>books</h1>
+      <h1 class="title-books">All<br>books</h1>
     </div>
     <div class="dashboard">
       <%= render "shared/dashboard", width: "width: 800px;" %>
     </div>
   </div>
-    <%# <div class="search-bar">
-    <%= form_with url: books_path, method: :get, html: {class:
-      "mb-4", data: {search_books_target: "form"}} do |f| %>
-      <%#= f.text_field :query,
-                class: "form-control",
-                placeholder: "Search by title or author...",
-                value: params[:query],
-                data: {search_books_target: "input"} %>
-    <%# end %>
-    <%# </div> %>
 
     <% cats = [ "Fantasy", "Romance", "Mystery", "Horror", "Thriller", "Paranormal", "Historical Fiction", "Sci-Fi", "Dystopian", "Memoir", "Art", "Self Help", "Motivational", "Health", "History", "Travel Guide", "Cookbook", "Poetry", "Erotic", "Female Author", "Trans Author", "Queer Author", "Non-Binary Author", "POC Author", "Black Author", "Asian Author", "LatinX Author", "Indegenous Author", "Agender Author", "Polysexual Author", "Disabled Author", "Neurodivergent Author", "Literary Prize", "Critically Acclaimed", "Dark", "Cerebral", "Inspiring", "Slow-Burn", "Psychological", "Quirky", "Coming Of Age", "Cultural", "Social Commentary", "Sunday Reading", "Guilty Pleasure", "Strong Female Lead", "Queer Romance", "Manga/Anime", "Graphic Novel", "Children's Book", "Design"] %>
 
@@ -26,13 +16,9 @@
             <label for="<%= item %>" class="checkbox-tag" data-tag-list-target="checkbox" data-action="click->tag-list#toggleActive">
             <input name="<%= item %>[<%= item %>]" class="checkbox checkbox-tag-input" type="checkbox" id="<%= item %>"  value="<%= @selected_cats.include?(item)? "1" : "0"%>"><%= item %></label>
         <% end %>
-
-        <%= f.submit %>
-        <%# <%= f.hidden_field  %>
+        <%= f.submit class: "btn btn-outline-warning btn-large" %>
       </div>
     <% end %>
-
-  <%# </div> %>
 
   <div class="grid-container">
     <% @books.each do |book| %>

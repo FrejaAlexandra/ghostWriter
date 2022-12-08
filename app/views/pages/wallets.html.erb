@@ -1,9 +1,16 @@
-<div style="height: 100vh; padding-top: 200px;">
-  <% @wallets.each do |wallet| %>
-    <div class=""><%= wallet.cash_value %></div>
-    <%= form_with url: orders_path do %>
-      <%= hidden_field_tag 'cash_wallet_id', wallet.id %>
-      <%= submit_tag 'Purchase', class: 'btn btn-primary' %>
+<div class="container">
+<h1>Add credits to your account</h1>
+
+  <div class="payment-container row">
+
+    <% @wallets.each do |wallet| %>
+    <div class="payment-card col-4 px-0">
+      <h4>Add €<%= wallet.cash_value %></h4>
+        <%= form_with url: orders_path do %>
+          <%= hidden_field_tag 'cash_wallet_id', wallet.id %>
+          <%= submit_tag 'Purchase', class: 'button-grey' %>
+        <% end %>
+      </div>
     <% end %>
-  <% end %>
+  </div>
 </div>

@@ -33,6 +33,16 @@ CashWallet.destroy_all
 puts "Creating wallet..."
 
 CashWallet.create!(
+  cash_value: "10",
+  price_cents: 1000
+)
+
+CashWallet.create!(
+  cash_value: "25",
+  price_cents: 250
+)
+
+CashWallet.create!(
   cash_value: "50",
   price_cents: 5000
 )
@@ -65,6 +75,21 @@ CashWallet.create!(
 CashWallet.create!(
   cash_value: "1000",
   price_cents: 100000
+)
+
+CashWallet.create!(
+  cash_value: "1500",
+  price_cents: 150000
+)
+
+CashWallet.create!(
+  cash_value: "2000",
+  price_cents: 200000
+)
+
+CashWallet.create!(
+  cash_value: "2500",
+  price_cents: 250000
 )
 
 puts "Destroying books..."
@@ -124,7 +149,7 @@ book_cover = [
 
   {
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQd9_COEHkxl9-hjLjB2OPJlVEpOk7x3S8VZA&usqp=CAU",
-    title: "One Flew Over the Cuckoo's Nest",
+    title: "One Flew Over The Cuckoo's Nest",
     author: "Ken Kesey",
     description: "One Flew Over the Cuckoo's Nest is a novel by Ken Kesey published in 1962. Set in an Oregon psychiatric hospital, the narrative serves as a study of institutional processes and the human mind, including a critique of psychiatry and a tribute to individualistic principles.",
     author_description: "Ken Kesey, in full Ken Elton Kesey, (born September 17, 1935, La Junta, Colorado, U.S.—died November 10, 2001, Eugene, Oregon), American writer who was a hero of the countercultural revolution and the hippie movement of the 1960s. Kesey was educated at the University of Oregon and Stanford University."
@@ -148,7 +173,7 @@ book_cover = [
 
   {
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_G9vtzNAJagX3GXQi_fR2ZtZtlL2-yC9DoA&usqp=CAU",
-    title: "The color purple",
+    title: "The Color Purple",
     author: "Alice Walker",
     description: "The Color Purple documents the traumas and gradual triumph of Celie, an African American teenager raised in rural isolation in Georgia, as she comes to resist the paralyzing self-concept forced on her by others. Celie narrates her life through painfully honest letters to God.",
     author_description: "Alice Malsenior Tallulah-Kate Walker (born February 9, 1944) is an American novelist, short story writer, poet, and social activist. In 1982, she became the first African-American woman to win the Pulitzer Prize for Fiction, which she was awarded for her novel The Color Purple. Over the span of her career, Walker has published seventeen novels and short story collections, twelve non-fiction works, and collections of essays and poetry. She has faced criticism for alleged antisemitism and for her endorsement of the conspiracist David Icke."
@@ -164,7 +189,7 @@ book_cover = [
 
   {
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTelPDqosKii0o4nKvjQuG4cVSVVBAf63ENTQ&usqp=CAU",
-    title: "Rita Hayworth and Shawshank Redemption",
+    title: "Shawshank Redemption",
     author: "Stephen King",
     description: "Andy Dufresne, a banker, was convicted of killing his wife and her lover and sent to Shawshank Prison. He maintains his innocence over the decades he spends at Shawshank during which time he forms a friendship with Red, a fellow inmate.",
     author_description: "Stephen Edwin King (born September 21, 1947) is an American author of horror, supernatural fiction, suspense, crime, science-fiction, and fantasy novels. Described as the 'King of Horror', a play on his surname and a reference to his high standing in pop culture, his books have sold more than 350 million copies, and many have been adapted into films, television series, miniseries, and comic books. King has published 64 novels, including seven under the pen name Richard Bachman, and five non-fiction books. He has also written approximately 200 short stories, most of which have been published in book collections."
@@ -180,7 +205,7 @@ book_cover = [
 
   {
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRc736QQ2h1lj-rI9kMMppADP6U1LrJHdflnQ&usqp=CAU",
-    title: "I Know Why the Caged Bird Sings",
+    title: "I Know Why The Caged Bird Sings",
     author: "Maya Angelou",
     description: "Sent by their mother to live with their devout, self-sufficient grandmother in a small Southern town, Maya and her brother, Bailey, endure the ache of abandonment and the prejudice of the local “powhitetrash.” At eight years old and back at her mother's side in St. Louis, Maya is attacked by a man many times her age—and has to live with the consequences for a lifetime. Years later, in San Francisco, Maya learns that love for herself, the kindness of others, her own strong spirit, and the ideas of great authors (“I met and fell in love with William Shakespeare”) will allow her to be free instead of imprisoned.",
     author_description: "Maya Angelou was an American memoirist, popular poet, and civil rights activist. She published seven autobiographies, three books of essays, several books of poetry, and is credited with a list of plays, movies, and television shows spanning over 50 years. She received dozens of awards and more than 50 honorary degrees. Angelou is best known for her series of seven autobiographies, which focus on her childhood and early adult experiences. The first, I Know Why the Caged Bird Sings (1969), tells of her life up to the age of 17 and brought her international recognition and acclaim."
@@ -188,7 +213,7 @@ book_cover = [
 
   {
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCrptowqiSzh_Lw1f4T2xZTwhUSTCCWCIf4Q&usqp=CAU",
-    title: "Foucault in Warsaw",
+    title: "Foucault In Warsaw",
     author: "Remigiusz Ryziński",
     description: "Nominated for the Nike Literary Award, Foucault in Warsaw reconstructs a vibrant, engaging picture of gay life in Poland under communism—from the joys found in secret nightclubs, to the fears of not knowing who was a secret informant.",
     author_description: "Remigiusz Ryziński is a philosopher, cultural critic, writer, and academic lecturer who works on gender and queer theory; he has published three academic books. He is a graduate of the Jagiellonian University in Kraków and has also studied at the Sorbonne in Paris."
@@ -196,7 +221,7 @@ book_cover = [
 
   {
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlXkMvUDPgWPBGBRBH9qccJfTlRSFNgQcuRA&usqp=CAU",
-    title: "Moby-Dick: or, The Whale",
+    title: "Moby-Dick",
     author: "Herman Melville",
     description: "Moby-Dick; or, The Whale is a novel by Herman Melville, in which Ishmael narrates the monomaniacal quest of Ahab, captain of the whaler Pequod, for revenge on the albino sperm whale Moby Dick, which on a previous voyage destroyed Ahab's ship and severed his leg at the knee.",
     author_description: "Herman Melville (August 1, 1819 - September 28, 1891) was an American novelist, short story writer, and poet of the American Renaissance period. Among his best-known works are Moby-Dick (1851); Typee (1846), a romanticized account of his experiences in Polynesia; and Billy Budd, Sailor, a posthumously published novella. Although his reputation was not high at the time of his death, the 1919 centennial of his birth was the starting point of a Melville revival, and Moby-Dick grew to be considered one of the great American novels."
@@ -204,7 +229,7 @@ book_cover = [
 
   {
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAgVytaBFSn6WVJz4wGOPpABJ0lgVMKLoaQg&usqp=CAU",
-    title: "My Father, the Pornographer: A Memoir",
+    title: "My Father, The Pornographer",
     author: "Chris Offutt",
     description: "In “one of the most sensitive, nuanced examinations of father and son relationships” (The Boston Globe), award-winning writer Chris Offutt struggles to understand his recently deceased father, based on his reading of the 400-plus novels his father—a well-known writer of pornography in the 1970s and 80s—left him in his will.",
     author_description: "Christopher John Offutt (born August 24, 1958) is an American writer. He is most widely known for his short stories and novels, but he has also published three memoirs and multiple nonfiction articles. In 2005, he had a story included in a comic book collection edited by Michael Chabon, and another in the anthology Noir. He has written episodes for the TV series True Blood and Weeds."
@@ -227,7 +252,7 @@ book_cover = [
 
   {
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiG0BcFIrGXXT58FNtjLiBcRtUQYR1HgKWdA&usqp=CAU",
-    title: "On the road",
+    title: "On The Road",
     author: "Jack Kerouac",
     description: "On the Road is a 1957 novel by American writer Jack Kerouac, based on the travels of Kerouac and his friends across the United States. It is considered a defining work of the postwar Beat and Counterculture generations, with its protagonists living life against a backdrop of jazz, poetry, and drug use.",
   },
@@ -241,22 +266,22 @@ book_cover = [
 
   {
     img: "https://s26162.pcdn.co/wp-content/uploads/2019/05/81gwhSBg7L-768x1152.jpg",
-    title: "On earth we're briefly gorgeous",
+    title: "On Earth We're Briefly gorgeous",
     author: "Ocean Vuong",
     description: "'On Earth We're Briefly Gorgeous,' By Ocean Vuong Ocean Vuong's debut novel is a painful but extraordinary coming-of-age story, about a young Vietnamese American writer whose fractured family was torn by their experiences during the Vietnam War.",
   },
 
-  {
-    img: "https://cdn-1.debijenkorf.nl/web_detail_2x/assouline-capri-dolce-vita/?reference=057/720/0577209001000000_pro_flt_frt_01_1108_1528_7231688.jpg",
-    title: "Capri Dolce Vita",
-    author: "Cesare Cunnacia",
-    description: "Capri, a resort island dating back to the height of the Roman Empire, has long been an extraordinary destination full of ancient charm. Cherished by everyone from physician Axel Munthe, who recommended its clean air to his patients as a cure for bronchitis ; to film director Jean-Luc Godard as the setting for his 1963 film Contempt ; to literary icons, celebrities, poets, and the jet set, Capri boasts a rich Mediterranean spirit and style that encompasses a wealth of beauty, from gardens to villas to caves to the people walking in the lively Piazzetta, where cars are prohibited and the island's playful attitude runs rampant. Capri Dolce Vita is a look at this fabled corner of the world through the ages and a celebration of paradise on earth.",
-    author_description: "Cesare Cunaccia is a writer, lecturer, curator, and journalist. He was editor at large for Vogue Italia and L'Uomo Vogue and the antiques consultant for Architectural Digest Italy."
-  },
+  # {
+  #   img: "https://cdn-1.debijenkorf.nl/web_detail_2x/assouline-capri-dolce-vita/?reference=057/720/0577209001000000_pro_flt_frt_01_1108_1528_7231688.jpg",
+  #   title: "Capri Dolce Vita",
+  #   author: "Cesare Cunnacia",
+  #   description: "Capri, a resort island dating back to the height of the Roman Empire, has long been an extraordinary destination full of ancient charm. Cherished by everyone from physician Axel Munthe, who recommended its clean air to his patients as a cure for bronchitis ; to film director Jean-Luc Godard as the setting for his 1963 film Contempt ; to literary icons, celebrities, poets, and the jet set, Capri boasts a rich Mediterranean spirit and style that encompasses a wealth of beauty, from gardens to villas to caves to the people walking in the lively Piazzetta, where cars are prohibited and the island's playful attitude runs rampant. Capri Dolce Vita is a look at this fabled corner of the world through the ages and a celebration of paradise on earth.",
+  #   author_description: "Cesare Cunaccia is a writer, lecturer, curator, and journalist. He was editor at large for Vogue Italia and L'Uomo Vogue and the antiques consultant for Architectural Digest Italy."
+  # },
 
   {
     img: "https://www.billboard.com/wp-content/uploads/2022/08/Snoop-Dogg-Cookbook-Embed-1240.jpeg",
-    title: "From crook to cook: platinum recipes from tha boss Dogg's kitchen",
+    title: "From Crook To Cook",
     author: "Snoop Dogg",
     description: "The first cookbook and recipe book from Tha Dogg, From Crook to Cook: Platinum Recipes from Tha Boss Dogg's Kitchen. You've seen Snoop Dogg work his culinary magic on VH1's Emmy-nominated Martha and Snoop's Potluck Dinner Party, and now Tha Dogg's up in your kitchen ... with his first cookbook. Recipe book that delivers 50 recipes straight from Snoop's own collection: Snoop's cookbook features OG soul food cookbook staples.",
     author_description: "Calvin Cordozar Broadus a.k.a. “Snoop Dogg” was born on October 20, 1971 in Long Beach, California where he was nicknamed Snoopy by his parents because of a striking resemblance to the Peanuts cartoon character. A promising rapper from an early age, he began performing in the 6th grade but was waylaid by brushes with the law in high school."
@@ -272,7 +297,7 @@ book_cover = [
 
   {
     img: "https://m.media-amazon.com/images/I/51T8OXMiB5L._SY344_BO1,204,203,200_QL70_ML2_.jpg",
-    title: "Ikigai: The Japanese secret to a long and happy life",
+    title: "The Japanese Secret To A Long And Happy Life",
     author: "Hector Garcia, Francesc Miralles",
     description: "Ikigai gently unlocks simple secrets we can all use to live long, meaningful, happy lives. Science-based studies weave beautifully into honest, straight-talking conversation you won't be able to put down. Warm, patient, and kind, this book pulls you gently along your own journey rather than pushing you from behind.",
     author_description: "Francesc Miralles is an award-winning author who has written a number of bestselling self-help and inspirational books. Born in Barcelona, he studied journalism, English literature, and German, and has worked as an editor, a translator, a ghost-writer, and a musician."
@@ -280,7 +305,7 @@ book_cover = [
 
   {
     img: "https://m.media-amazon.com/images/I/51VvX-IKp+L._SX258_BO1,204,203,200_.jpg",
-    title: "Cooking to Save your Life",
+    title: "Cooking To Save Your Life",
     author: "Cheyenne Olivier",
     description: "In this playful, erudite and sensationally delicious cookbook, Banerjee takes us through the recipes he has delighted his friends, colleagues and students with - from charred avocado to Andhra pork ribs, deconstructed salade niçoise to a trifle made in under 20 minutes.",
     author_description: "Cheyenne Olivier is an illustrator based in France. She builds her images from a visual vocabulary of elementary shapes like squares, circles and triangles that form the basic blocks of a connected universe where humans, animals, plants, and minerals are all made of the same matter."
@@ -296,7 +321,7 @@ book_cover = [
 
   {
     img: "https://m.media-amazon.com/images/I/41LwAb57YJL._SY344_BO1,204,203,200_QL70_ML2_.jpg",
-    title: "Being mortal: illness, medicine and what matters in the end",
+    title: "Being Mortal",
     author: "Atul Gawande",
     description: "Being Mortal: Medicine and What Matters in the End is a 2014 non-fiction book by American surgeon Atul Gawande. The book addresses end-of-life care, hospice care, and also contains Gawande's reflections and personal stories. He suggests that medical care should focus on well-being rather than survival.",
     author_description: "He is a renowned surgeon, writer, and public health leader. Prior to joining the Biden-Harris administration, he was a practicing general and endocrine surgeon at Brigham and Women's Hospital and a professor at Harvard Medical School and the Harvard T.H. Chan School of Public Health."
@@ -304,7 +329,7 @@ book_cover = [
 
   {
     img: "https://m.media-amazon.com/images/I/41dZrbZCqTL._SY344_BO1,204,203,200_QL70_ML2_.jpg",
-    title: "Polysecure: Attachment, Trauma and Consensual Nonmonogamy",
+    title: "Polysecure",
     author: "Jessica Fern",
     description: "Attachment theory has entered the mainstream, but most discussions focus on how we can cultivate secure monogamous relationships. What if, like many people, you're striving for secure, happy attachments with more than one partner? Polyamorous psychotherapist Jessica Fern breaks new ground by extending attachment theory into the realm of consensual nonmonogamy. Using her nested model of attachment and trauma, she expands our understanding of how emotional experiences can influence our relationships. Then, she sets out six specific strategies to help you move toward secure attachments in your multiple relationships. Polysecure is both a trailblazing theoretical treatise and a practical guide.",
     author_description: "I grew up in a neighborhood well acquainted with violence and a family considerably impacted by divorce, multi-generational trauma, substance abuse and interpersonal discord. The effects of these experiences were challenging for many years, but through the therapeutic process, I was able to reclaim my strength, build resiliency, create relationships that I was nourished by and live from a heart that was open instead of fearfully protected. This journey began with investing my time and resources in workshops, retreats and therapy in order to heal myself, rewire my reactivity, re-invent certain relationships, while letting go of others and comfortably stand in the ways I'm different.  "
@@ -336,7 +361,7 @@ book_cover = [
 
   {
     img: "https://m.media-amazon.com/images/I/41mQIVrnIaL._SY344_BO1,204,203,200_QL70_ML2_.jpg",
-    title: "Bauhaus: (World of Art)",
+    title: "Bauhaus",
     author: "Frank Whitford",
     description: "The author describes the historical context of the Bauhaus school, the development of the Bauhaus style, key figures at the school and within the movement, and the influence of Bauhaus art and design on future artistic styles.",
     author_description: "Dr Frank Whitford was an art historian and critic, and one of Britain's leading experts on 20th-century German and Austrian art. During his varied career, he lectured on the history of art at University College London and Homerton College, Cambridge, wrote several books and served as a newspaper art critic. From 1983 onwards he was a senior member of Wolfson College, Cambridge."
@@ -344,7 +369,7 @@ book_cover = [
 
   {
     img: "https://pm1.narvii.com/6178/0d884ae5d41510cc073bea3f182c8108a4da8e2f_hq.jpg",
-    title: "Attack on Titan",
+    title: "Attack On Titan",
     author: "Hajime Isayama",
     description: "A Japanese manga series written and illustrated by Hajime Isayama, Attack on Titan is set in a world where humanity lives inside cities surrounded by enormous walls that protect them from gigantic man-eating humanoids called Titans.",
     author_description: "Hajime Isayama is a Japanese author and manga artist, widely known for being the creative genius behind the Attack on Titan franchise series. Born in Oita Prefecture, Japan, Isayama studied cartoon design in college and made his big break on his very first series with Attack on Titan being published in 2009."
@@ -360,7 +385,7 @@ book_cover = [
 
   {
     img: "https://m.media-amazon.com/images/I/41mT5UyhZ4L._SY344_BO1,204,203,200_QL70_ML2_.jpg",
-    title: "The body keeps the score",
+    title: "The Body Keeps The Score",
     author: "Bessel A. van der Kolk",
     description: "Renowned trauma expert Bessel van der Kolk has spent over three decades working with survivors. In The Body Keeps the Score, he transforms our understanding of traumatic stress, revealing how it literally rearranges the brain's wiring—specifically areas dedicated to pleasure, engagement, control, and trust. He shows how these areas can be reactivated through innovative treatments including neurofeedback, mindfulness techniques, play, yoga, and other therapies. Based on Dr. van der Kolk's own research and that of other leading specialists, The Body Keeps the Score offers proven alternatives to drugs and talk therapy—and a way to reclaim lives.",
     author_description: "Bessel van der Kolk MD has spent his professional life studying how children and adults adapt to traumatic experiences. He translates emerging findings from neuroscience and attachment research to develop and study a range of effective treatments for traumatic stress and developmental trauma in children and adults."
@@ -378,7 +403,7 @@ book_cover = [
 tags = ["Fantasy", "Romance", "Mystery", "Horror", "Thriller", "Paranormal", "Historical Fiction", "Sci-Fi", "Dystopian", "Memoir", "Art", "Self Help", "Motivational", "Health", "History", "Travel Guide", "Cookbook", "Poetry", "Erotic", "Female Author", "Trans Author", "Queer Author", "Non-Binary Author", "POC Author", "Black Author", "Asian Author", "LatinX Author", "Indegenous Author", "Agender Author", "Polysexual Author", "Fat Author", "Disabled Author", "Neurodivergent Author", "Literary Prize", "Critically Acclaimed", "Dark", "Cerebral", "Inspiring", "Slow-Burn", "Psychological", "Quirky", "Coming Of Age", "Cultural", "Social Commentary", "Sunday Reading", "Guilty Pleasure", "Strong Female Lead", "Queer Romance", "Manga/Anime", "Graphic Novel", "Children's Book", "Design"]
 
 book_cover.each do |i|
-  file = URI.open(i[:img])
+  file = URI.open(i[:img], "User-Agent" => "Ruby/3.1.2")
 
   book = Book.new(
     title: i[:title],
@@ -386,6 +411,7 @@ book_cover.each do |i|
     author_description: i[:author_description],
     user_id: User.last.id,
     psuedoname: i[:author],
+    tag_list: tags.sample(3),
     initial_share_value: 1.3,
     current_share_value: 1.3,
     total_amount: 4000,

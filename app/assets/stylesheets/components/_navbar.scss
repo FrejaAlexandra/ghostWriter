@@ -1,16 +1,17 @@
 .navbar {
+  height: 8vh;
   position: fixed;
   width: 100%;
-  background: $white;
-  border-color: $greyscale-2;
-  box-shadow: 2px 2px $greyscale-2;
+  background: #dadde96b;
+  // border-color: $greyscale-2;
+  box-shadow: 1px 1px $greyscale-2;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   font-size: 22px;
   padding-left: 15px;
   padding-right: 15px;
-  z-index: 1;
+  z-index: 2;
   #logo {
     width: 14rem;
   }
@@ -18,7 +19,8 @@
 
 .learn-about {
   width: 50vw;
-  background: $white;
+  // background: $white;
+  color: #2B4F8D;
   display: flex;
   flex-direction: row;
   justify-content: space-around;

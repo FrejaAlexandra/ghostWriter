@@ -2,7 +2,24 @@
   margin: 0 auto;
   width: 60rem;
   height: 25.6875rem;
-  margin-top: 10rem;
+  margin-top: 5rem;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+  z-index:-1;
+  -webkit-box-shadow:0 0 20px $greyscale-5;
+  -moz-box-shadow:0 0 20px $greyscale-5;
+  box-shadow:0 0 20px $greyscale-5;
+  top:0;
+  bottom:0;
+  left:10px;
+  right:10px;
+
+}
+
+.title-sp {
+  font-family: $headers-font;
+  font-size: 80px;
+  color: $brown;
 }
 
 .card {
@@ -12,7 +29,11 @@
   position: relative;
   color: $white;
   padding-left: 15rem;
+  padding-right: 10rem;
   padding-top: 8rem;
+  padding-bottom: 3rem;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .number {
@@ -21,61 +42,61 @@
   position: absolute;
   left: 3rem;
   bottom: -5rem;
+  color: $white;
+}
+
+.swiper-button-next:after {
+  color: $white;
+}
+
+.swiper-button-prev:after {
+  color: $white;
 }
 
 .card-1 {
-  background-color: #a5c76a;
-  color:  #d3efa5;
-  .number {
-    color:  #d3efa5;
-  }
+background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(13, 53, 255, 0.528)), url(https://www.pandotrip.com/wp-content/uploads/2015/08/Top-10-Google-Great-Sandy-Photo-by-Google-Earth-980x654.jpg);
 }
 
 .card-2 {
-  background-color: #c76a6a;
-  color:  #efc9a5;
+  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(13, 53, 255, 0.128)), url(https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Earth_View_2020_update_hero_image.max-1000x1000.jpg);
 }
 
 .card-3 {
-  background-color: #a5c76a;
-  color:  #d3efa5;
+  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(47, 160, 13, 0.755)), url(https://www.pandotrip.com/wp-content/uploads/2015/08/Top-10-Google-Ayamonte-Photo-by-Google-Earth.jpg);
 }
 
 .card-4 {
-  background-color: #c76a6a;
-  color:  #efc9a5;
+  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(21, 16, 16, 0.778)), url(https://earthcasestudies.files.wordpress.com/2020/11/babf5-sundarbans_web-e1468790303606-659x568-1.jpg);
 }
 
 .card-5 {
-  background-color: #a5c76a;
-  color:  #d3efa5;
+  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(241, 186, 240, 0.778)), url(https://www.kibrispdr.org/data/604/google-earth-wallpaper-11.jpg);
 }
 
 .card-6 {
-  background-color: #c76a6a;
-  color:  #efc9a5;
+  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(225, 205, 116, 0.483)), url(https://i.pinimg.com/736x/b5/40/b7/b540b7bee624154c58984e2712ac1894--earth-view-google-earth.jpg);
 }
 
 .card-7 {
-  background-color: #a5c76a;
-  color:  #d3efa5;
+  background-image: linear-gradient(rgba(0,0,0,0.4),rgb(238, 193, 240)), url(https://gisplay.pl/images/stories/googlemaps/gearth/earthview_3.jpg);
 }
 
 .card-8 {
-  background-color: #c76a6a;
-  color:  #efc9a5;
+  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(244, 195, 135, 0.778)), url(https://www.thesun.co.uk/wp-content/uploads/2020/02/maps11.jpg);
 }
 
 .card-9 {
-  background-color: #a5c76a;
-  color:  #d3efa5;
+  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(254, 143, 79, 0.885)), url(https://expertphotography.b-cdn.net/wp-content/uploads/2019/04/abstract-aerial-landscape-photography-tips-14.jpg);
 }
 
 .card-10 {
-  background-color: #c76a6a;
-  color:  #efc9a5;
+  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(247, 172, 246, 0.778)), url(https://www.webdesignerdepot.com/cdn-origin/uploads/satellite_photos/3.jpg);
 }
 
 .swiper-button-next {
   color: $greyscale-4;
+}
+
+.typed-text {
+  font-size: 3rem;
 }
