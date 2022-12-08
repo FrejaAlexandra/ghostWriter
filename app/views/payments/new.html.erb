@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row py-4">
-    <div class="col-md-3"><%#= image_tag @order.teddy.photo_url, width: '100%' %></div>
+    <div class="col-md-3"><%= image_tag "ghostwriter.jpg", width: '100%' %></div>
     <div class="col">
       <h1>Checkout summary</h1>
       <p>Purchase of <strong><%= @order.cash_wallet.cash_value %></strong> for <strong><%= humanized_money_with_symbol @order.amount_cents %></strong></p>
