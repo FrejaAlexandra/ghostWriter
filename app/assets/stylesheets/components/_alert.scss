@@ -1,25 +1,27 @@
 .alert {
   position: absolute;
-  bottom: 0;
+  left: 25%;
+  top: 25%;
+  padding: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100vw;
-  height: 92vh;
+  width: 50vw;
+  height: 50vh;
   z-index: 1000;
   background-color: rgba(0, 0, 0, 0.2);
 }
 
 .custom-notice {
   padding: 5rem;
-  background-color: $white;
+  background-color: rgba(255, 255, 255, 0.644);
   border: solid 1px grey;
   font-size: 5rem;
 
 }
 
 .btn-close {
-  font-size: 8 rem;
+  font-size: 2 rem;
 }
 
 // .custom-alert {
