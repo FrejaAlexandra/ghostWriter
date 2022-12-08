@@ -7,12 +7,12 @@
   <%= f.input :author_description, label: "Can you tell us a little bit about yourself?", placeholder: "Max 500 characters" %>
   <%= f.input :example, label: "Here you can paste in an extract of your book for potential investors to read...", placeholder: "Max 1000 characters" %>
   <%= f.input :photo, label: "Please upload your cover art...", as: :file %>
-  <%= link_to root_path, class: "custom-label cursor-pointer" do %>
+  <%= link_to self_publication_path, class: "custom-label cursor-pointer", target: "blank" do %>
   <%= "What are the costs of publishing your book? <strong>click here for information on the costs of self publication</strong>".html_safe %>
   <% end %>
   <%= f.input :initial_share_value, :input_html => { value: 1, step: 0.05 }, placeholder: "€", label: false %>
 
-  <%= link_to root_path, class: "custom-label cursor-pointer" do %>
+  <%= link_to learn_investment_path, class: "custom-label cursor-pointer", target: "blank" do %>
     <%= "How many shares do you want to sell? <strong>click here for information share values</strong>".html_safe %>
   <% end %>
   <%= f.input :total_amount, :input_html => { value:  10000, step: 100 }, label: "How many shares", label: false %>

@@ -1,7 +1,7 @@
 
 <div class="container">
   <div class="title">
-    <h1 class="title mt-5">10 Reasons To Self Publish</h1>
+    <h1 class="title-sp mt-5">10 Reasons To Self Publish</h1>
   </div>
 
  <div class="highlights">
@@ -16,12 +16,12 @@
           <h1 class="number">1</h1>
             <div id="typed-strings">
               <h1>More control over content and design</h1>
-              <p data-controller="typed-freya"></p>
+              <p class="typed-text" data-controller="typed-js"></p>
             </div>
         </div>
       </div>
       <div class="swiper-slide">
-        <div class="card card-2">
+        <div class="card card-2 tinted-image">
           <h1 class="number">2</h1>
           <h1>Self-publish with better time to market</h1>
         </div>
@@ -99,6 +99,19 @@
   <div class="m-100 text-center my-5">
     <%= link_to "I'm ready to publish my book!", new_book_path , class: "btn btn-outline-dark btn-lg" %>
   </div>
+  <div class="m-100 text-center my-5">
+    <%= link_to "I'm still not convinced", "#section-2" , class: "btn btn-outline-warning btn-md" %>
+  </div>
+
+  <section>
+    <div class="author-stories">
+      <p>
+      “You are a start-up … The next great business is you.”
+
+      —Hugh Howey
+      </p>
+    </div>
+  </section>
 
 </div>
 
