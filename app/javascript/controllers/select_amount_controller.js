@@ -5,7 +5,7 @@ export default class extends Controller {
   static targets = ["text", "price", "value"]
 
   connect() {
-
+    console.log("test")
   }
 
   calculateValue(event) {

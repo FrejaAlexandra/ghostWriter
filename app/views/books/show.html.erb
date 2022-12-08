@@ -1,5 +1,5 @@
 <div class="container">
-  <section class="d-flex justify-content-between">
+  <div class="d-flex justify-content-between">
 
     <% if @book.photo.present? %>
       <%= cl_image_tag @book.photo.key, class: "book-cover"%>
@@ -35,9 +35,9 @@
           <p>€ <span data-select-amount-target="text"></span></p>
         </div>
 
-        <div id="form">
+        <div id="form" style="z-index: 100;">
               <%= simple_form_for [@book, @share] do |f| %>
-          <%= f.input :share_amount, input_html: { value: 0,  "data-action": "change->select-amount#calculateValue" }, label: "Select amount of shares" %>
+          <%= f.input :share_amount, input_html: { value: 0,  "data-action": "change->select-amount#calculateValue", style: "z-index: 100;" }, label: "Select amount of shares" %>
           <input type="hidden" id="selected-value" name="selected-value" value="0" data-select-amount-target="value">
           <%= f.submit value: "SELL", class: "button-red", name: 'sell' %>
           <%= f.submit value: "BUY", class: "button-green", name: 'buy' %>
@@ -53,9 +53,11 @@
             <img src="https://res.cloudinary.com/dsl9ixl0t/image/upload/v1670490747/chart_1_ovhu6b.png" alt="chart">
           <% end %>
         </div>
+
       </div>
     </div>
-  </section>
+  </div>
+
 
 <div class="container">
   <ul class="nav nav-tabs" id="myTab" role="tablist">
@@ -69,52 +71,24 @@
     <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false"><p>Financials</p></button>
   </li>
   <li class="nav-item" role="presentation">
-    <button class="nav-link" id="disabled-tab" data-bs-toggle="tab" data-bs-target="#disabled-tab-pane" type="button" role="tab" aria-controls="disabled-tab-pane" aria-selected="false"><p>Example</p></button>
+    <button class="nav-link" id="disabled-tab" data-bs-toggle="tab" data-bs-target="#disabled-tab-pane" type="button" role="tab" aria-controls="disabled-tab-pane" aria-selected="false"><p>Analysis</p></button>
   </li>
 </ul>
 
-<div class="tab-content" id="myTabContent">
-  <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0"><p><%= @book.description %></p></div>
-  <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0"><p><%= @book.author_description %></p></div>
-  <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
-
-    <div class="row">
-        <div class="col-3"><p>Revenue</p></div>
-        <div class="col-3"><p>Operating expences</p></div>
-        <div class="col-3"><p>Net income</p></div>
-        <div class="col-3"><p>Effective tax rate</p></div>
-
-        <div class="col-3"><p>€35.76</p></div>
-        <div class="col-3"><p>€8.87</p></div>
-        <div class="col-3"><p>↗77.54%</p></div>
-        <div class="col-3"><p>-5.02%	</p></div>
-
-<%#
-        <div class="col-3"><p>Net income:</p></div>
-        <div class="col-3"><p>€32.12</p></div>
-        <div class="col-3"><p>↙-147.68%%</p></div>
-        <div class="col-3"><p>-</p></div>
-
-
-        <div class="col-3"><p>Net profit margin:</p></div>
-        <div class="col-3"><p>€19.84</p></div>
-        <div class="col-3"><p>-</p></div>
-        <div class="col-3"><p>-</p></div>
-
-
-        <div class="col-3"><p>Net profit margin:</p></div>
-        <div class="col-3"><p>€19.84</p></div>
-        <div class="col-3"><p>-</p></div>
-        <div class="col-3"><p>-</p></div> %>
-
-
-
+  <div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+      <p><%= @book.description %></p>
+    </div>
+    <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+      <p><%= @book.author_description %></p>
+    </div>
+    <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+      <p>Financials</p>
+    </div>
+    <div class="tab-pane fade" id="disabled-tab-pane" role="tabpanel" aria-labelledby="disabled-tab" tabindex="0">
+      <p>Analysis</p>
     </div>
   </div>
-  <div class="tab-pane fade" id="disabled-tab-pane" role="tabpanel" aria-labelledby="disabled-tab" tabindex="0">
-    <p>Example</p>
-   </div>
-</div>
 </div>
 
   <%= link_to "Edit", edit_book_path(@book) %>
