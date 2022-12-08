@@ -19,7 +19,7 @@ class SharesController < ApplicationController
     end
     @book.save
     if @share.save
-      redirect_to book_path(@book)
+      redirect_to book_path(@book), notice: "Thankyou for your support!"
     else
       render :new, status: :unprocessable_entity
     end
