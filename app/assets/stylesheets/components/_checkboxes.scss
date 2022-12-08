@@ -3,7 +3,6 @@
   transform: scale(0);
   background-color: $white;
   color: $greyscale-4;
-
 }
 
 #checkboxes {
@@ -16,7 +15,10 @@
     border: solid $greyscale-4;
     border-radius: 10px;
     color: $greyscale-4;
-    padding: 0.1rem 0.4rem;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 4px;
+    padding-right: 4px;
     color: $greyscale-4;
 
   }
