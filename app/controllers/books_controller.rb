@@ -38,7 +38,7 @@ class BooksController < ApplicationController
     @book.current_share_value = @book.initial_share_value
     @book.user = current_user
     if @book.save
-      redirect_to book_path(@book), notice: "Congratulations! Your book is now on the market"
+      redirect_to book_path(@book), notice: "Congratulations! Your book is now on the market", class: "btn btn-outline-secondary"
     else
       render :new, status: :unprocessable_entity
     end
