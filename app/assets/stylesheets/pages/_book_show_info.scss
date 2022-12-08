@@ -68,10 +68,36 @@
 }
 
 #myTab {
-  background-color: rgba(255, 255, 255, 0.196);
-  font-size: x-large;
+  font-size: large;
+  border: none;
 }
 
 #myTabContent {
-  font-size: large;
+  font-size: medium;
+  border-style: groove
+
+}
+
+#home-tab {
+  background-color: transparent;
+  border-style: groove;
+
+}
+
+#profile-tab {
+  background-color: transparent;
+  border-style: groove;
+
+}
+
+#contact-tab {
+  background-color:  transparent;
+  border-style: groove;
+
+}
+
+#disabled-tab {
+  background-color:  transparent;
+  border-style: groove;
+
 }

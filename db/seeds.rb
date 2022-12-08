@@ -409,6 +409,7 @@ book_cover.each do |i|
     title: i[:title],
     description: i[:description],
     author_description: i[:author_description],
+    finacials: 
     user_id: User.last.id,
     psuedoname: i[:author],
     tag_list: tags.sample(3),
