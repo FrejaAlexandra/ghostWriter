@@ -16,5 +16,5 @@ application.register("tag-list", TagListController)
 import TomSelectController from "./tom_select_controller"
 application.register("tom-select", TomSelectController)
 
-import TypedJsController from "./typed_freya_controller"
+import TypedJsController from "./typed_js_controller"
 application.register("typed-js", TypedJsController)
