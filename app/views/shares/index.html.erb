@@ -10,7 +10,7 @@
     <% total_balance = sum + current_user.balance %>
 
     <div class="portfolio-container">
-      <div class="secition-left col-4">
+      <div class="secition-left col-3">
         <p><strong>Wallet</strong></p>
         <p>€<%= sum.round(2) %></p>
         <p><strong>Cash</strong></p>
@@ -18,14 +18,14 @@
         <p><strong>Total Balance</strong></p>
         <p>€ <%= total_balance.round(2) %></p>
       </div>
-        <div class="section-middle col-4 text-center">
+        <div class="section-middle col-6 text-center">
           <% if current_user.balance <= 50 %>
-            <img src="https://res.cloudinary.com/dsl9ixl0t/image/upload/v1670490770/portfolio-chart-new_kauylt.png" alt="Portfolio image" style="width: 100%"> %>
+            <img src="https://res.cloudinary.com/dsl9ixl0t/image/upload/v1670490770/portfolio-chart-new_kauylt.png" alt="Portfolio image" >
           <% else %>
-            <img src="https://res.cloudinary.com/dsl9ixl0t/image/upload/v1670490770/portfolio-chart-new_kauylt.png" alt="Portfolio image">
+            <img src="https://res.cloudinary.com/dsl9ixl0t/image/upload/v1670490782/portfolio-chart_p0dsrv.png" alt="Portfolio image" style="width: 100%" >
           <% end %>
         </div>
-      <div class="section-right col-4 text-end">
+      <div class="section-right col-3 text-end">
         <p><strong>Daily profit</strong></p>
         <p>€52,-</p>
         <p><strong>Total profit</strong></p>

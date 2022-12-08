@@ -10,7 +10,7 @@ User.create!(
   last_name: "Jonk",
   email: "remcojonk@hotmail.com",
   password: "123456",
-  balance: 5000
+  balance: 0
 )
 
 User.create!(
@@ -26,7 +26,7 @@ User.create!(
 
   email: "freyaheaton94@gmail.com",
   password: "TAMPON",
-  balance: 6500
+  balance: 75
 )
 puts "Destroying wallets."
 CashWallet.destroy_all

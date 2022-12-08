@@ -25,3 +25,24 @@
   border-radius: 10px;
   box-shadow: 1px, 1px, 1px, rgb(66, 65, 65);
 }
+
+.purchage-section{
+  display: flex;
+  gap: 1rem;
+
+  #share_value{
+    flex: 20%
+  }
+
+  #form{
+    flex: 30%
+  }
+
+  #graph{
+    flex: 40%
+  }
+
+  #graph img{
+    width: 100%
+  }
+}
