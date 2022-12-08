@@ -19,7 +19,11 @@
         <p>€ <%= total_balance.round(2) %></p>
       </div>
         <div class="section-middle col-4 text-center">
-          <img src="https://www.fireblog.nl/wp-content/uploads/2019/12/SP10yr-1.jpg" alt="" style="width: 100%">
+          <% if current_user.balance <= 50 %>
+            <img src="https://res.cloudinary.com/dsl9ixl0t/image/upload/v1670490770/portfolio-chart-new_kauylt.png" alt="Portfolio image" style="width: 100%"> %>
+          <% else %>
+            <img src="https://res.cloudinary.com/dsl9ixl0t/image/upload/v1670490770/portfolio-chart-new_kauylt.png" alt="Portfolio image">
+          <% end %>
         </div>
       <div class="section-right col-4 text-end">
         <p><strong>Daily profit</strong></p>
