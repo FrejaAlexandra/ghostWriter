@@ -23,26 +23,41 @@
 }
 
 .card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   margin: 0 auto;
+  gap: 5vw;
   width: 60rem;
   height: 25.6875rem;
   position: relative;
   color: $white;
-  padding-left: 15rem;
-  padding-right: 10rem;
-  padding-top: 8rem;
-  padding-bottom: 3rem;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .number {
-  font-size: 25rem;
+  flex: 25%;
+  padding-left: 2rem;
   font-family: $numbers-font;
-  position: absolute;
-  left: 3rem;
-  bottom: -5rem;
   color: $white;
+  font-size: 25rem;
+}
+
+.dubbel-number{
+  flex: 25%;
+  padding-left: 2rem;
+  font-family: $numbers-font;
+  color: $white;
+  font-size: 20rem;
+}
+
+.info-box{
+  flex: 75%;
+  padding-top: 6rem;
+  h1, p{
+    width: 90%;
+  }
 }
 
 .swiper-button-next:after {
@@ -97,6 +112,6 @@ background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(13, 53, 255, 0.528)),
   color: $greyscale-4;
 }
 
-.typed-text {
-  font-size: 3rem;
-}
+// .typed-text {
+//   font-size: 3rem;
+// }
