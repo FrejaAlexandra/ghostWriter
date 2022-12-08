@@ -84,7 +84,9 @@
 
 #myTabContent {
   font-size: medium;
-  border-style: groove
+  border-style: groove;
+  height: 500px;
+  padding: 30px;
 
 }
 
@@ -109,5 +111,18 @@
 #disabled-tab {
   background-color:  transparent;
   border-style: groove;
+}
+
+// .row {
+//   text-align: center;
+
+// }
+
+.col-3 {
+  border-left: 1px solid rgb(121, 121, 122);
+  padding: 5px;
+  text-align: start;
+  padding-left: 30px;
+
 
 }
