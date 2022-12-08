@@ -10,15 +10,27 @@
 
     <% cats = [ "Fantasy", "Romance", "Mystery", "Horror", "Thriller", "Paranormal", "Historical Fiction", "Sci-Fi", "Dystopian", "Memoir", "Art", "Self Help", "Motivational", "Health", "History", "Travel Guide", "Cookbook", "Poetry", "Erotic", "Female Author", "Trans Author", "Queer Author", "Non-Binary Author", "POC Author", "Black Author", "Asian Author", "LatinX Author", "Indegenous Author", "Agender Author", "Polysexual Author", "Disabled Author", "Neurodivergent Author", "Literary Prize", "Critically Acclaimed", "Dark", "Cerebral", "Inspiring", "Slow-Burn", "Psychological", "Quirky", "Coming Of Age", "Cultural", "Social Commentary", "Sunday Reading", "Guilty Pleasure", "Strong Female Lead", "Queer Romance", "Manga/Anime", "Graphic Novel", "Children's Book", "Design"] %>
 
-    <%= form_with url: books_path, method: :get, html: {class: "mb-4", data: {search_books_target: "form", controller: "tag-list"}} do |f| %>
+    <%= form_with url: books_path, method: :get, html: {class: "my-4", data: {search_books_target: "form", controller: "tag-list"}} do |f| %>
       <div id="checkboxes">
         <% cats.each do |item| %>
             <label for="<%= item %>" class="checkbox-tag" data-tag-list-target="checkbox" data-action="click->tag-list#toggleActive">
             <input name="<%= item %>[<%= item %>]" class="checkbox checkbox-tag-input" type="checkbox" id="<%= item %>"  value="<%= @selected_cats.include?(item)? "1" : "0"%>"><%= item %></label>
         <% end %>
-        <%= f.submit class: "btn btn-outline-warning btn-large" %>
+        <%= f.submit class: "btn btn-outline-dark" %>
       </div>
     <% end %>
+  <p>
+    <% if @selected_cats[0..(@selected_cats.length - 4)].length > 0 %>
+      <strong>Viewing All Books with &nbsp</strong>
+      <% @selected_cats[0..(@selected_cats.length - 4)].each do |cat| %>
+        <%= cat %>
+        <% if cat != @selected_cats[0..(@selected_cats.length - 4)].last %>
+        , &nbsp
+        <% end %>
+      <% end %>
+    <%= link_to "Back To All Books", books_path , class: "btn btn-outline-secondary mx-5" %>
+    <% end %>
+  </p>
 
   <div class="grid-container">
     <% @books.each do |book| %>
