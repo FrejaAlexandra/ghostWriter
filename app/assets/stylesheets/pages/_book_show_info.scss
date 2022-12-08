@@ -1,6 +1,7 @@
 .info-section{
   margin-top: 5rem;
   width: 100%;
+
 }
 
 .navigation-bar{
@@ -45,12 +46,21 @@
   justify-content: space-between;
   border-radius: 5px;
   flex-direction: column;
-  //border: solid;
   border-color: $greyscale-3;
   color: $greyscale-5;
   background-color: $white;
   box-shadow: 1px 1px $greyscale-2;
   font-family: $headers-font;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+  z-index:-1;
+  -webkit-box-shadow:0 0 20px $greyscale-5;
+  -moz-box-shadow:0 0 20px $greyscale-5;
+  box-shadow:0 0 20px $greyscale-5;
+  top:0;
+  bottom:0;
+  left:10px;
+  right:10px;
 }
 
 .value-list {
@@ -65,4 +75,39 @@
 
 .stock-image {
   height: 200px;
+}
+
+#myTab {
+  font-size: large;
+  border: none;
+}
+
+#myTabContent {
+  font-size: medium;
+  border-style: groove
+
+}
+
+#home-tab {
+  background-color: transparent;
+  border-style: groove;
+
+}
+
+#profile-tab {
+  background-color: transparent;
+  border-style: groove;
+
+}
+
+#contact-tab {
+  background-color:  transparent;
+  border-style: groove;
+
+}
+
+#disabled-tab {
+  background-color:  transparent;
+  border-style: groove;
+
 }
