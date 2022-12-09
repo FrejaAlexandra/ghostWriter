@@ -26,26 +26,37 @@
   box-shadow: 1px, 1px, 1px, rgb(66, 65, 65);
 }
 
-.purchage-section{
+.top-section{
   display: flex;
-  gap: 1rem;
+  justify-content: space-between;
 
-  #share_value{
-    flex: 20%
+  .value-list-item{
+    flex: end;
   }
 
-  #form{
-    flex: 30%
-  }
+}
+
 
   #graph{
-    flex: 40%
+    flex: 50%
   }
 
   #graph img{
     width: 100%
   }
-}
+
+
+  #share_value{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #form{
+    flex: 50%;
+    z-index: 1500;
+  }
+
+
 
 .tab-container{
   margin-top: 2.5rem;
