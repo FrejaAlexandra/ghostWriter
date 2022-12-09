@@ -24,10 +24,10 @@
     </div>
 
     <div class="book-info">
-      <h4><%= book.title.first(40) %></h4>
-      <h6><i><%= book.psuedoname %></i></h6>
-      <% if book.description.length > 120 %>
-        <p><%= book.description.first(120) %>...</p>
+      <h3><%= book.title.first(40) %></h3>
+      <h5><i><%= book.psuedoname %></i></h5>
+      <% if book.description.length > 150 %>
+        <p><%= book.description.first(150) %>...</p>
       <% else %>
         <p><%= book.description%></p>
       <% end %>
