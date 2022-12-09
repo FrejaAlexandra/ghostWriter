@@ -9,7 +9,11 @@
       <div class="grid-dashboard">
         <div class="grid-dashboard-item">
           <p>Available Cash</p>
-          <p>€ <%= current_user.balance.round(2) %></p>
+          <% if current_user.balance %>
+            <p>€ <%= current_user.balance.round(2) %></p>
+          <% else %>
+            <p>0</p>
+          <% end %>
         </div>
         <div class="grid-dashboard-item">
           <p>Earnings</p>
