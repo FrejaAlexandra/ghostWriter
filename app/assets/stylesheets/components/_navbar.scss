@@ -1,5 +1,5 @@
 .navbar {
-  height: 8vh;
+  // height: 8vh;
   position: fixed;
   width: 100%;
   background: #dadde96b;
@@ -8,8 +8,7 @@
   flex-direction: row;
   justify-content: space-between;
   font-size: 22px;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 12px;
   z-index: 2;
   #logo {
     width: 16rem;

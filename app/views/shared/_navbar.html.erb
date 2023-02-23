@@ -1,30 +1,20 @@
-
 <div class="navbar">
-    <% if user_signed_in? %>
-      <div class="home">
-        <%= link_to root_path, class: "nav-link" do %>
-          <%= image_tag "https://res.cloudinary.com/dsl9ixl0t/image/upload/v1670330826/GhostWT_logo_new_uks1qy.png", id: "logo" %>
-        <% end %>
-      </div>
-
-        <div class="learn-about">
-          <%= link_to "View Library", books_path, class: "nav-link" %>
-          <%= link_to "Our Mission", "/#section-1", class: "nav-link" %>
-          <%= link_to "More On Self Publication", self_publication_path, class: "nav-link" %>
-          <%= link_to "More On Investment", learn_investment_path, class: "nav-link" %>
-        </div>
-
-
-        <div class="dropdown">
-            <%= image_tag "https://media-exp1.licdn.com/dms/image/C4E03AQHoDUMGvMwGYg/profile-displayphoto-shrink_800_800/0/1656082565036?e=1675900800&v=beta&t=5Ns1CnGmAbOHRJ6VQKmLTg6uZR03jcTorECyjmcgyU8", class: "avatar-bordered dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%= link_to "My portfolio",  book_shares_path(:book_id), class: "dropdown-item" %>
-              <%= link_to "Publish my book", new_book_path, class: "dropdown-item"%>
-              <%= link_to "Add credit",  wallets_path, class: "dropdown-item" %>
-              <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
-            </div>
-        </div>
-      <% else %>
-          <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-      <% end %>
+  <div class="home">
+    <h2>Ghoswriter</h2>
+  </div>
+  <div class="learn-about">
+    <%= link_to "View Library", books_path, class: "nav-link" %>
+    <%= link_to "Our Mission", "/#section-1", class: "nav-link" %>
+    <%= link_to "More On Self Publication", self_publication_path, class: "nav-link" %>
+    <%= link_to "More On Investment", learn_investment_path, class: "nav-link" %>
+  </div>
+  <div class="dropdown">
+    <%= image_tag "https://res.cloudinary.com/dipnvqfev/image/upload/v1677154163/remco-jonk-profile_zuyzp4.jpg", class: "avatar-bordered dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+      <%= link_to "My portfolio",  book_shares_path(:book_id), class: "dropdown-item" %>
+      <%= link_to "Publish my book", new_book_path, class: "dropdown-item"%>
+      <%= link_to "Add credit",  wallets_path, class: "dropdown-item" %>
+      <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
+    </div>
+  </div>
 </div>

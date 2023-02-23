@@ -24,11 +24,11 @@
       <div class="d-flex justify-content-between">
         <div id="graph">
           <% if  @book.created_at == Date.today %>
-            <img src="https://res.cloudinary.com/dsl9ixl0t/image/upload/v1670490792/starting-chart_ujqsfp.png" alt="chart">
+            <img src="https://res.cloudinary.com/dsl9ixl0t/image/upload/v1670490792/starting-chart_ujqsfp.png" alt="chart" style="width:100%">
           <% elsif @book.current_share_value <= 1.6 %>
-            <img src="https://res.cloudinary.com/dsl9ixl0t/image/upload/v1670490757/Losing-chart_ik5fty.png" alt="chart">
+            <img src="https://res.cloudinary.com/dsl9ixl0t/image/upload/v1670490757/Losing-chart_ik5fty.png" alt="chart" style="width:100%">
           <% elsif @book.current_share_value > 1.6 %>
-            <img src="https://res.cloudinary.com/dsl9ixl0t/image/upload/v1670490747/chart_1_ovhu6b.png" alt="chart">
+            <img src="https://res.cloudinary.com/dsl9ixl0t/image/upload/v1670490747/chart_1_ovhu6b.png" alt="chart" style="width:100%">
           <% end %>
         </div>
 

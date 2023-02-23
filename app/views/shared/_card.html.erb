@@ -1,7 +1,7 @@
 <%= link_to book_path(book), style: "text-decoration: none;" do %>
-<% num = [ -28.7, -24.5, -18,1, -17.4, -12, -9.2, -8.1, -6.4, -5.4, -3.2, -1.1, -0.8, -0.3, -0.1, 0.1, 0.3, 0.4, 0.5, 0.6, 0.9, 1.1, 1.5, 1.9, 2.6, 3.7, 5.9, 6.3, 8.6, 13.9, 15.4, 16.6, 17.1, 20.4, 24.8, 31.9, 45.7].sample %>
-<div class="my-card grid-item" style="<%= width %>">
-  <div class="growth">
+  <% num = [ -28.7, -24.5, -18,1, -17.4, -12, -9.2, -8.1, -6.4, -5.4, -3.2, -1.1, -0.8, -0.3, -0.1, 0.1, 0.3, 0.4, 0.5, 0.6, 0.9, 1.1, 1.5, 1.9, 2.6, 3.7, 5.9, 6.3, 8.6, 13.9, 15.4, 16.6, 17.1, 20.4, 24.8, 31.9, 45.7].sample %>
+  <div class="my-card grid-item" style="<%= width %>">
+    <div class="growth">
       <% if num > 0 %>
         <div style="color: green;">
           <%= num %> %
@@ -11,37 +11,32 @@
           <%=  num %> %
         </div>
       <% end %>
-  </div>
-
-  <div class="d-flex">
-    <div class='image-container'>
-    <% if book.photo.present? %>
-      <%= cl_image_tag book.photo.key, class: "book-cover"%>
-    <% else %>
-      <img src="https://mpd-biblio-covers.imgix.net/9781250847959.jpg?" class="book-cover" alt="book-cover">
-    <% end %>
-
     </div>
-
-    <div class="book-info">
-      <h3><%= book.title.first(40) %></h3>
-      <h5><i><%= book.psuedoname %></i></h5>
-      <% if book.description.length > 150 %>
-        <p><%= book.description.first(150) %>...</p>
-      <% else %>
-        <p><%= book.description%></p>
-      <% end %>
+    <div class="d-flex">
+      <div class='image-container'>
+        <% if book.photo.present? %>
+          <%= cl_image_tag book.photo.key, class: "book-cover"%>
+        <% else %>
+          <img src="https://mpd-biblio-covers.imgix.net/9781250847959.jpg?" class="book-cover" alt="book-cover">
+        <% end %>
+      </div>
+      <div class="book-info">
+        <h3><%= book.title.first(40) %></h3>
+        <h5><i><%= book.psuedoname %></i></h5>
+        <% if book.description.length > 150 %>
+          <p><%= book.description.first(150) %>...</p>
+        <% else %>
+          <p><%= book.description%></p>
+        <% end %>
+      </div>
     </div>
-  </div>
-
-    <h4 class="button-white-horizontal small my-3 mx-auto">€ <%= book.current_share_value.round(2) %></h4>
-
-  <div class="d-flex">
-    <div class="info-bar">
-      <% book.tag_list.each do |tag| %>
-          <p><%= tag %></p>
-      <% end %>
+    <h4 class="button-white-horizontal small ">€ <%= book.current_share_value.round(2) %></h4>
+    <div class="d-flex">
+      <div class="info-bar">
+        <% book.tag_list.each do |tag| %>
+          <p><strong><%= tag %></strong></p>
+        <% end %>
+      </div>
     </div>
   </div>
-</div>
 <% end %>

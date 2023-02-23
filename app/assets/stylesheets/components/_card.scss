@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: space-between;
   position: relative;
-  height: 45vh;
+  // height: 45vh;
   border-radius: 10px;
   border: solid;
   border-color: $greyscale-2;
@@ -58,7 +58,7 @@
     display: flex;
     justify-content: space-around;
     font-size: 16px;
-    margin-top: auto;
+    margin: 1rem 0 0 1rem;
     p {
       font-size: 1.0rem;
     }
